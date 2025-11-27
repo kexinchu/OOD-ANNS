@@ -1,0 +1,967 @@
+{
+  "summary": {
+    "total_queries": 1000,
+    "base_graph_size": 10000000,
+    "dimension": 200,
+    "eh_matrix": {
+      "avg_latency_ms": 0.384535,
+      "p50_latency_ms": 0.394000,
+      "p95_latency_ms": 0.553000,
+      "p99_latency_ms": 0.616000,
+      "std_dev_ms": 0.104927,
+      "total_time_ms": 384.535000,
+      "percentage": 34.105644
+    },
+    "other_logic": {
+      "avg_latency_ms": 0.742947,
+      "p50_latency_ms": 0.657000,
+      "p95_latency_ms": 1.497000,
+      "p99_latency_ms": 2.066000,
+      "std_dev_ms": 0.463811,
+      "total_time_ms": 742.947000,
+      "percentage": 65.894356,
+      "breakdown": {
+        "prepare_bitset": {
+          "avg_latency_ms": 0.016669,
+          "p50_latency_ms": 0.016000,
+          "p95_latency_ms": 0.019000,
+          "p99_latency_ms": 0.021000,
+          "std_dev_ms": 0.001529,
+          "total_time_ms": 16.669000,
+          "percentage_of_other": 2.243632,
+          "percentage_of_total": 1.478427
+        },
+        "get_defects_edges": {
+          "avg_latency_ms": 0.616357,
+          "p50_latency_ms": 0.541000,
+          "p95_latency_ms": 1.241000,
+          "p99_latency_ms": 1.328000,
+          "std_dev_ms": 0.378620,
+          "total_time_ms": 616.357000,
+          "percentage_of_other": 82.961100,
+          "percentage_of_total": 54.666682
+        },
+        "add_edges": {
+          "avg_latency_ms": 0.109921,
+          "p50_latency_ms": 0.088000,
+          "p95_latency_ms": 0.240000,
+          "p99_latency_ms": 0.290000,
+          "std_dev_ms": 0.122600,
+          "total_time_ms": 109.921000,
+          "percentage_of_other": 14.795268,
+          "percentage_of_total": 9.749247
+        }
+      }
+    },
+    "total_ngfix": {
+      "avg_latency_ms": 1.127482,
+      "p50_latency_ms": 1.056000,
+      "p95_latency_ms": 1.736000,
+      "p99_latency_ms": 2.340000,
+      "std_dev_ms": 0.382607,
+      "total_time_ms": 1127.482000
+    }
+  },
+  "detailed_results": [
+    {
+      "query_id": 0,
+      "eh_matrix_time_ms": 0.175000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.007000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.021000,
+      "total_time_ms": 0.433000
+    },
+    {
+      "query_id": 1,
+      "eh_matrix_time_ms": 0.185000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.007000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.021000,
+      "total_time_ms": 0.448000
+    },
+    {
+      "query_id": 2,
+      "eh_matrix_time_ms": 0.185000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.007000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.021000,
+      "total_time_ms": 0.472000
+    },
+    {
+      "query_id": 3,
+      "eh_matrix_time_ms": 0.186000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.007000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.021000,
+      "total_time_ms": 0.492000
+    },
+    {
+      "query_id": 4,
+      "eh_matrix_time_ms": 0.187000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.007000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.022000,
+      "total_time_ms": 0.496000
+    },
+    {
+      "query_id": 5,
+      "eh_matrix_time_ms": 0.188000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.022000,
+      "total_time_ms": 0.508000
+    },
+    {
+      "query_id": 6,
+      "eh_matrix_time_ms": 0.189000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.022000,
+      "total_time_ms": 0.512000
+    },
+    {
+      "query_id": 7,
+      "eh_matrix_time_ms": 0.189000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.022000,
+      "total_time_ms": 0.515000
+    },
+    {
+      "query_id": 8,
+      "eh_matrix_time_ms": 0.191000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.518000
+    },
+    {
+      "query_id": 9,
+      "eh_matrix_time_ms": 0.191000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.526000
+    },
+    {
+      "query_id": 10,
+      "eh_matrix_time_ms": 0.191000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.531000
+    },
+    {
+      "query_id": 11,
+      "eh_matrix_time_ms": 0.191000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.536000
+    },
+    {
+      "query_id": 12,
+      "eh_matrix_time_ms": 0.192000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.549000
+    },
+    {
+      "query_id": 13,
+      "eh_matrix_time_ms": 0.192000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.549000
+    },
+    {
+      "query_id": 14,
+      "eh_matrix_time_ms": 0.193000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.551000
+    },
+    {
+      "query_id": 15,
+      "eh_matrix_time_ms": 0.195000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.559000
+    },
+    {
+      "query_id": 16,
+      "eh_matrix_time_ms": 0.195000,
+      "prepare_bitset_time_ms": 0.014000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.560000
+    },
+    {
+      "query_id": 17,
+      "eh_matrix_time_ms": 0.195000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.576000
+    },
+    {
+      "query_id": 18,
+      "eh_matrix_time_ms": 0.195000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.023000,
+      "total_time_ms": 0.583000
+    },
+    {
+      "query_id": 19,
+      "eh_matrix_time_ms": 0.195000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.008000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.024000,
+      "total_time_ms": 0.586000
+    },
+    {
+      "query_id": 20,
+      "eh_matrix_time_ms": 0.196000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.088000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.114000,
+      "total_time_ms": 0.587000
+    },
+    {
+      "query_id": 21,
+      "eh_matrix_time_ms": 0.196000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.120000,
+      "add_edges_time_ms": 0.000000,
+      "other_logic_time_ms": 0.136000,
+      "total_time_ms": 0.600000
+    },
+    {
+      "query_id": 22,
+      "eh_matrix_time_ms": 0.197000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.122000,
+      "add_edges_time_ms": 0.003000,
+      "other_logic_time_ms": 0.137000,
+      "total_time_ms": 0.607000
+    },
+    {
+      "query_id": 23,
+      "eh_matrix_time_ms": 0.197000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.128000,
+      "add_edges_time_ms": 0.003000,
+      "other_logic_time_ms": 0.151000,
+      "total_time_ms": 0.608000
+    },
+    {
+      "query_id": 24,
+      "eh_matrix_time_ms": 0.198000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.129000,
+      "add_edges_time_ms": 0.003000,
+      "other_logic_time_ms": 0.151000,
+      "total_time_ms": 0.608000
+    },
+    {
+      "query_id": 25,
+      "eh_matrix_time_ms": 0.198000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.130000,
+      "add_edges_time_ms": 0.003000,
+      "other_logic_time_ms": 0.154000,
+      "total_time_ms": 0.622000
+    },
+    {
+      "query_id": 26,
+      "eh_matrix_time_ms": 0.198000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.134000,
+      "add_edges_time_ms": 0.003000,
+      "other_logic_time_ms": 0.155000,
+      "total_time_ms": 0.624000
+    },
+    {
+      "query_id": 27,
+      "eh_matrix_time_ms": 0.198000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.134000,
+      "add_edges_time_ms": 0.004000,
+      "other_logic_time_ms": 0.155000,
+      "total_time_ms": 0.624000
+    },
+    {
+      "query_id": 28,
+      "eh_matrix_time_ms": 0.198000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.136000,
+      "add_edges_time_ms": 0.004000,
+      "other_logic_time_ms": 0.156000,
+      "total_time_ms": 0.627000
+    },
+    {
+      "query_id": 29,
+      "eh_matrix_time_ms": 0.200000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.137000,
+      "add_edges_time_ms": 0.004000,
+      "other_logic_time_ms": 0.157000,
+      "total_time_ms": 0.628000
+    },
+    {
+      "query_id": 30,
+      "eh_matrix_time_ms": 0.200000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.138000,
+      "add_edges_time_ms": 0.004000,
+      "other_logic_time_ms": 0.158000,
+      "total_time_ms": 0.629000
+    },
+    {
+      "query_id": 31,
+      "eh_matrix_time_ms": 0.200000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.138000,
+      "add_edges_time_ms": 0.004000,
+      "other_logic_time_ms": 0.161000,
+      "total_time_ms": 0.632000
+    },
+    {
+      "query_id": 32,
+      "eh_matrix_time_ms": 0.200000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.139000,
+      "add_edges_time_ms": 0.005000,
+      "other_logic_time_ms": 0.161000,
+      "total_time_ms": 0.632000
+    },
+    {
+      "query_id": 33,
+      "eh_matrix_time_ms": 0.201000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.139000,
+      "add_edges_time_ms": 0.005000,
+      "other_logic_time_ms": 0.161000,
+      "total_time_ms": 0.633000
+    },
+    {
+      "query_id": 34,
+      "eh_matrix_time_ms": 0.201000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.139000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.162000,
+      "total_time_ms": 0.635000
+    },
+    {
+      "query_id": 35,
+      "eh_matrix_time_ms": 0.201000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.140000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.162000,
+      "total_time_ms": 0.637000
+    },
+    {
+      "query_id": 36,
+      "eh_matrix_time_ms": 0.202000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.140000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.163000,
+      "total_time_ms": 0.639000
+    },
+    {
+      "query_id": 37,
+      "eh_matrix_time_ms": 0.202000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.141000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.165000,
+      "total_time_ms": 0.641000
+    },
+    {
+      "query_id": 38,
+      "eh_matrix_time_ms": 0.202000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.141000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.165000,
+      "total_time_ms": 0.644000
+    },
+    {
+      "query_id": 39,
+      "eh_matrix_time_ms": 0.202000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.142000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.168000,
+      "total_time_ms": 0.646000
+    },
+    {
+      "query_id": 40,
+      "eh_matrix_time_ms": 0.203000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.145000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.168000,
+      "total_time_ms": 0.646000
+    },
+    {
+      "query_id": 41,
+      "eh_matrix_time_ms": 0.203000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.146000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.168000,
+      "total_time_ms": 0.646000
+    },
+    {
+      "query_id": 42,
+      "eh_matrix_time_ms": 0.203000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.147000,
+      "add_edges_time_ms": 0.007000,
+      "other_logic_time_ms": 0.169000,
+      "total_time_ms": 0.647000
+    },
+    {
+      "query_id": 43,
+      "eh_matrix_time_ms": 0.203000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.148000,
+      "add_edges_time_ms": 0.008000,
+      "other_logic_time_ms": 0.170000,
+      "total_time_ms": 0.648000
+    },
+    {
+      "query_id": 44,
+      "eh_matrix_time_ms": 0.204000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.150000,
+      "add_edges_time_ms": 0.008000,
+      "other_logic_time_ms": 0.175000,
+      "total_time_ms": 0.648000
+    },
+    {
+      "query_id": 45,
+      "eh_matrix_time_ms": 0.204000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.151000,
+      "add_edges_time_ms": 0.008000,
+      "other_logic_time_ms": 0.175000,
+      "total_time_ms": 0.649000
+    },
+    {
+      "query_id": 46,
+      "eh_matrix_time_ms": 0.205000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.152000,
+      "add_edges_time_ms": 0.008000,
+      "other_logic_time_ms": 0.176000,
+      "total_time_ms": 0.650000
+    },
+    {
+      "query_id": 47,
+      "eh_matrix_time_ms": 0.206000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.152000,
+      "add_edges_time_ms": 0.008000,
+      "other_logic_time_ms": 0.177000,
+      "total_time_ms": 0.651000
+    },
+    {
+      "query_id": 48,
+      "eh_matrix_time_ms": 0.206000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.153000,
+      "add_edges_time_ms": 0.008000,
+      "other_logic_time_ms": 0.178000,
+      "total_time_ms": 0.652000
+    },
+    {
+      "query_id": 49,
+      "eh_matrix_time_ms": 0.206000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.153000,
+      "add_edges_time_ms": 0.008000,
+      "other_logic_time_ms": 0.178000,
+      "total_time_ms": 0.652000
+    },
+    {
+      "query_id": 50,
+      "eh_matrix_time_ms": 0.207000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.155000,
+      "add_edges_time_ms": 0.009000,
+      "other_logic_time_ms": 0.179000,
+      "total_time_ms": 0.653000
+    },
+    {
+      "query_id": 51,
+      "eh_matrix_time_ms": 0.207000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.155000,
+      "add_edges_time_ms": 0.009000,
+      "other_logic_time_ms": 0.180000,
+      "total_time_ms": 0.654000
+    },
+    {
+      "query_id": 52,
+      "eh_matrix_time_ms": 0.207000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.156000,
+      "add_edges_time_ms": 0.009000,
+      "other_logic_time_ms": 0.180000,
+      "total_time_ms": 0.654000
+    },
+    {
+      "query_id": 53,
+      "eh_matrix_time_ms": 0.207000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.156000,
+      "add_edges_time_ms": 0.009000,
+      "other_logic_time_ms": 0.183000,
+      "total_time_ms": 0.655000
+    },
+    {
+      "query_id": 54,
+      "eh_matrix_time_ms": 0.207000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.158000,
+      "add_edges_time_ms": 0.010000,
+      "other_logic_time_ms": 0.183000,
+      "total_time_ms": 0.655000
+    },
+    {
+      "query_id": 55,
+      "eh_matrix_time_ms": 0.207000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.159000,
+      "add_edges_time_ms": 0.010000,
+      "other_logic_time_ms": 0.183000,
+      "total_time_ms": 0.657000
+    },
+    {
+      "query_id": 56,
+      "eh_matrix_time_ms": 0.209000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.160000,
+      "add_edges_time_ms": 0.010000,
+      "other_logic_time_ms": 0.184000,
+      "total_time_ms": 0.657000
+    },
+    {
+      "query_id": 57,
+      "eh_matrix_time_ms": 0.209000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.160000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.186000,
+      "total_time_ms": 0.659000
+    },
+    {
+      "query_id": 58,
+      "eh_matrix_time_ms": 0.210000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.160000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.187000,
+      "total_time_ms": 0.659000
+    },
+    {
+      "query_id": 59,
+      "eh_matrix_time_ms": 0.210000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.161000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.187000,
+      "total_time_ms": 0.661000
+    },
+    {
+      "query_id": 60,
+      "eh_matrix_time_ms": 0.210000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.161000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.188000,
+      "total_time_ms": 0.663000
+    },
+    {
+      "query_id": 61,
+      "eh_matrix_time_ms": 0.210000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.161000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.189000,
+      "total_time_ms": 0.664000
+    },
+    {
+      "query_id": 62,
+      "eh_matrix_time_ms": 0.212000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.161000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.189000,
+      "total_time_ms": 0.666000
+    },
+    {
+      "query_id": 63,
+      "eh_matrix_time_ms": 0.212000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.161000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.189000,
+      "total_time_ms": 0.666000
+    },
+    {
+      "query_id": 64,
+      "eh_matrix_time_ms": 0.213000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.163000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.190000,
+      "total_time_ms": 0.667000
+    },
+    {
+      "query_id": 65,
+      "eh_matrix_time_ms": 0.214000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.163000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.192000,
+      "total_time_ms": 0.668000
+    },
+    {
+      "query_id": 66,
+      "eh_matrix_time_ms": 0.214000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.163000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.192000,
+      "total_time_ms": 0.668000
+    },
+    {
+      "query_id": 67,
+      "eh_matrix_time_ms": 0.215000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.163000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.193000,
+      "total_time_ms": 0.670000
+    },
+    {
+      "query_id": 68,
+      "eh_matrix_time_ms": 0.215000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.164000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.194000,
+      "total_time_ms": 0.673000
+    },
+    {
+      "query_id": 69,
+      "eh_matrix_time_ms": 0.217000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.164000,
+      "add_edges_time_ms": 0.011000,
+      "other_logic_time_ms": 0.194000,
+      "total_time_ms": 0.674000
+    },
+    {
+      "query_id": 70,
+      "eh_matrix_time_ms": 0.217000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.165000,
+      "add_edges_time_ms": 0.012000,
+      "other_logic_time_ms": 0.195000,
+      "total_time_ms": 0.675000
+    },
+    {
+      "query_id": 71,
+      "eh_matrix_time_ms": 0.217000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.165000,
+      "add_edges_time_ms": 0.012000,
+      "other_logic_time_ms": 0.195000,
+      "total_time_ms": 0.677000
+    },
+    {
+      "query_id": 72,
+      "eh_matrix_time_ms": 0.217000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.165000,
+      "add_edges_time_ms": 0.012000,
+      "other_logic_time_ms": 0.196000,
+      "total_time_ms": 0.677000
+    },
+    {
+      "query_id": 73,
+      "eh_matrix_time_ms": 0.218000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.168000,
+      "add_edges_time_ms": 0.012000,
+      "other_logic_time_ms": 0.196000,
+      "total_time_ms": 0.678000
+    },
+    {
+      "query_id": 74,
+      "eh_matrix_time_ms": 0.218000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.169000,
+      "add_edges_time_ms": 0.012000,
+      "other_logic_time_ms": 0.197000,
+      "total_time_ms": 0.678000
+    },
+    {
+      "query_id": 75,
+      "eh_matrix_time_ms": 0.218000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.169000,
+      "add_edges_time_ms": 0.013000,
+      "other_logic_time_ms": 0.198000,
+      "total_time_ms": 0.680000
+    },
+    {
+      "query_id": 76,
+      "eh_matrix_time_ms": 0.218000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.170000,
+      "add_edges_time_ms": 0.013000,
+      "other_logic_time_ms": 0.200000,
+      "total_time_ms": 0.681000
+    },
+    {
+      "query_id": 77,
+      "eh_matrix_time_ms": 0.218000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.170000,
+      "add_edges_time_ms": 0.014000,
+      "other_logic_time_ms": 0.201000,
+      "total_time_ms": 0.683000
+    },
+    {
+      "query_id": 78,
+      "eh_matrix_time_ms": 0.219000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.173000,
+      "add_edges_time_ms": 0.014000,
+      "other_logic_time_ms": 0.202000,
+      "total_time_ms": 0.684000
+    },
+    {
+      "query_id": 79,
+      "eh_matrix_time_ms": 0.220000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.173000,
+      "add_edges_time_ms": 0.014000,
+      "other_logic_time_ms": 0.202000,
+      "total_time_ms": 0.685000
+    },
+    {
+      "query_id": 80,
+      "eh_matrix_time_ms": 0.220000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.173000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.203000,
+      "total_time_ms": 0.686000
+    },
+    {
+      "query_id": 81,
+      "eh_matrix_time_ms": 0.220000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.175000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.204000,
+      "total_time_ms": 0.686000
+    },
+    {
+      "query_id": 82,
+      "eh_matrix_time_ms": 0.221000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.176000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.208000,
+      "total_time_ms": 0.689000
+    },
+    {
+      "query_id": 83,
+      "eh_matrix_time_ms": 0.221000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.177000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.209000,
+      "total_time_ms": 0.692000
+    },
+    {
+      "query_id": 84,
+      "eh_matrix_time_ms": 0.223000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.178000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.211000,
+      "total_time_ms": 0.692000
+    },
+    {
+      "query_id": 85,
+      "eh_matrix_time_ms": 0.223000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.178000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.212000,
+      "total_time_ms": 0.693000
+    },
+    {
+      "query_id": 86,
+      "eh_matrix_time_ms": 0.224000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.180000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.213000,
+      "total_time_ms": 0.693000
+    },
+    {
+      "query_id": 87,
+      "eh_matrix_time_ms": 0.226000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.180000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.213000,
+      "total_time_ms": 0.696000
+    },
+    {
+      "query_id": 88,
+      "eh_matrix_time_ms": 0.226000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.181000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.215000,
+      "total_time_ms": 0.696000
+    },
+    {
+      "query_id": 89,
+      "eh_matrix_time_ms": 0.226000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.181000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.215000,
+      "total_time_ms": 0.697000
+    },
+    {
+      "query_id": 90,
+      "eh_matrix_time_ms": 0.226000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.185000,
+      "add_edges_time_ms": 0.015000,
+      "other_logic_time_ms": 0.215000,
+      "total_time_ms": 0.697000
+    },
+    {
+      "query_id": 91,
+      "eh_matrix_time_ms": 0.227000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.185000,
+      "add_edges_time_ms": 0.016000,
+      "other_logic_time_ms": 0.215000,
+      "total_time_ms": 0.699000
+    },
+    {
+      "query_id": 92,
+      "eh_matrix_time_ms": 0.227000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.186000,
+      "add_edges_time_ms": 0.016000,
+      "other_logic_time_ms": 0.216000,
+      "total_time_ms": 0.699000
+    },
+    {
+      "query_id": 93,
+      "eh_matrix_time_ms": 0.228000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.186000,
+      "add_edges_time_ms": 0.016000,
+      "other_logic_time_ms": 0.217000,
+      "total_time_ms": 0.699000
+    },
+    {
+      "query_id": 94,
+      "eh_matrix_time_ms": 0.229000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.187000,
+      "add_edges_time_ms": 0.016000,
+      "other_logic_time_ms": 0.218000,
+      "total_time_ms": 0.699000
+    },
+    {
+      "query_id": 95,
+      "eh_matrix_time_ms": 0.229000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.187000,
+      "add_edges_time_ms": 0.016000,
+      "other_logic_time_ms": 0.218000,
+      "total_time_ms": 0.699000
+    },
+    {
+      "query_id": 96,
+      "eh_matrix_time_ms": 0.229000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.189000,
+      "add_edges_time_ms": 0.016000,
+      "other_logic_time_ms": 0.219000,
+      "total_time_ms": 0.700000
+    },
+    {
+      "query_id": 97,
+      "eh_matrix_time_ms": 0.229000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.189000,
+      "add_edges_time_ms": 0.016000,
+      "other_logic_time_ms": 0.221000,
+      "total_time_ms": 0.700000
+    },
+    {
+      "query_id": 98,
+      "eh_matrix_time_ms": 0.229000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.190000,
+      "add_edges_time_ms": 0.016000,
+      "other_logic_time_ms": 0.222000,
+      "total_time_ms": 0.700000
+    },
+    {
+      "query_id": 99,
+      "eh_matrix_time_ms": 0.229000,
+      "prepare_bitset_time_ms": 0.015000,
+      "get_defects_edges_time_ms": 0.191000,
+      "add_edges_time_ms": 0.017000,
+      "other_logic_time_ms": 0.222000,
+      "total_time_ms": 0.701000
+    }
+  ]
+}
