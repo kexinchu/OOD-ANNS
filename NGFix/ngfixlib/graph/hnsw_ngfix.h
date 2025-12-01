@@ -998,6 +998,186 @@ public:
         std::cout << "entry point: " << entry_point << "\n";
     }
 
+    // Search with lightweight hardness metrics tracking
+    // Returns: (results, ndc, metrics_struct)
+    // Metrics tracked: S, r_visit, r_early, frontier_margin, improvement_ratio
+    struct LightweightMetrics {
+        size_t S;                    // Total number of visited nodes (pop operations)
+        float r_visit;               // Visit Budget Usage: S / ef
+        float r_early;               // Early-Convergence Ratio: t_last_improve / S
+        float top1_last1_diff;       // Distance difference: last1_dist - top1_dist (in top-k results)
+        float delta_improve;         // Early-vs-Final Improvement Ratio
+        float d_worst_early;         // Top-k worst distance at early stage
+        float d_worst_final;          // Final top-k worst distance
+        float d_best_cand_final;      // Final priority queue best candidate distance
+        size_t t_last_improve;       // Last step index where d_worst improved
+    };
+    
+    std::tuple<std::vector<std::pair<float, id_t> >, size_t, LightweightMetrics> 
+    searchKnnWithLightweightMetrics(T* query_data, size_t k, size_t ef, size_t& ndc, float alpha = 0.2f) {
+        size_t hop_limit = std::numeric_limits<int>::max();
+        size_t hop = 0;
+        if(ef < k) {
+            hop_limit = ef;
+            ef = k;
+        }
+
+        Search_QuadHeap q0(ef, visited_list_pool_);
+        Search_QuadHeap* q = &q0;
+        
+        // Ensure entry_point is within bounds
+        if(entry_point >= max_elements || entry_point >= node_locks.size()) {
+            LightweightMetrics empty_metrics = {0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0};
+            return std::make_tuple(std::vector<std::pair<float, id_t>>(), 0, empty_metrics);
+        }
+        
+        float dist = getQueryDist(entry_point, query_data);
+        q->push(entry_point, dist, is_deleted(entry_point));
+        q->set_visited(entry_point);
+        
+        // Track metrics
+        LightweightMetrics metrics;
+        metrics.t_last_improve = 0;
+        metrics.d_worst_early = std::numeric_limits<float>::max();
+        metrics.d_worst_final = std::numeric_limits<float>::max();
+        metrics.d_best_cand_final = std::numeric_limits<float>::max();
+        
+        float d_worst_prev = std::numeric_limits<float>::max();
+        size_t S_0 = std::min((size_t)std::ceil(alpha * ef), (size_t)1000); // Early stage threshold
+        bool early_stage_captured = false;
+        const float eps = 1e-6f;
+        
+        // Initialize ndc (entry_point distance calculation)
+        ndc = 1;  // entry_point distance is already calculated
+        
+        while (!q->is_empty()) {
+            if (hop > hop_limit) {
+                break;
+            }
+            
+            // Get current top-k worst distance before processing
+            float d_worst_current = q->get_worst_topk_dist(k);
+            
+            // Get best candidate distance (smallest in candidate_set) before processing
+            float d_best_cand_current = q->get_best_candidate_dist();
+            
+            // Check if d_worst improved (record based on ndc, not hop)
+            if(d_worst_current < d_worst_prev - eps) {
+                metrics.t_last_improve = ndc;  // Use ndc instead of hop
+                d_worst_prev = d_worst_current;
+            }
+            
+            // Capture early stage worst distance (based on ndc, not hop)
+            if(!early_stage_captured && ndc >= S_0) {
+                if(d_worst_current < std::numeric_limits<float>::max()) {
+                    metrics.d_worst_early = d_worst_current;
+                    early_stage_captured = true;
+                }
+            }
+            
+            // Pop the next candidate
+            std::pair<float, id_t> current_node_pair = q->get_next_id();
+            id_t current_node_id = current_node_pair.second;
+
+            float candidate_dist = -current_node_pair.first;
+            float dist_bound = q->get_dist_bound();
+            bool flag_stop_search = candidate_dist > dist_bound;
+
+            // Before stopping, record the best candidate distance still in queue
+            if (flag_stop_search) {
+                // The current d_best_cand_current is the best candidate still in queue (before this pop)
+                // But we just popped, so we need to get the current best from queue
+                float current_best = q->get_best_candidate_dist();
+                if(current_best < std::numeric_limits<float>::max()) {
+                    metrics.d_best_cand_final = current_best;
+                } else {
+                    // Queue is empty or invalid, use the popped candidate distance as fallback
+                    metrics.d_best_cand_final = candidate_dist;
+                }
+                break;
+            }
+            
+            hop += 1;
+            
+            // Ensure current_node_id is within bounds
+            if(current_node_id >= max_elements || current_node_id >= node_locks.size()) {
+                break;
+            }
+            std::shared_lock <std::shared_mutex> lock(node_locks[current_node_id]);
+            auto [outs, sz, st] = getNeighbors(current_node_id);
+            for (int i = st; i < st + sz; ++i) {
+                id_t candidate_id = outs[i];
+                if(candidate_id >= max_elements) {
+                    continue;
+                }
+                if(i < st + sz - 1) {
+                    q->prefetch_visited_list(outs[i+1]);
+                }
+                if (!q->is_visited(candidate_id)) {
+                    q->set_visited(candidate_id);
+                    float dist = getQueryDist(candidate_id, query_data);
+                    q->push(candidate_id, dist, is_deleted(candidate_id));
+                    ndc += 1;
+                }
+            }
+        }
+        
+        // Calculate final metrics
+        auto res = q->get_result(k);
+        
+        // Get final worst distance in top-k
+        if(res.size() >= k) {
+            metrics.d_worst_final = res[k - 1].first;
+        } else if(!res.empty()) {
+            metrics.d_worst_final = res.back().first;
+        }
+        
+        // Get final best candidate distance if not already set (when search didn't stop early)
+        if(metrics.d_best_cand_final >= std::numeric_limits<float>::max()) {
+            metrics.d_best_cand_final = q->get_best_candidate_dist();
+            // If still invalid, use d_worst_final as fallback (shouldn't happen normally)
+            if(metrics.d_best_cand_final >= std::numeric_limits<float>::max()) {
+                metrics.d_best_cand_final = metrics.d_worst_final;
+            }
+        }
+        
+        // If early stage wasn't captured, use current worst
+        if(!early_stage_captured && metrics.d_worst_final < std::numeric_limits<float>::max()) {
+            metrics.d_worst_early = metrics.d_worst_final;
+        }
+        
+        // Set S = ndc (S is the number of distance computations, which equals visited nodes)
+        metrics.S = ndc;
+        
+        // Calculate derived metrics
+        metrics.r_visit = (ef > 0) ? (float)metrics.S / ef : 0.0f;
+        metrics.r_early = (metrics.S > 0) ? (float)metrics.t_last_improve / metrics.S : 0.0f;
+        
+        // Calculate top1_last1_diff: distance difference between top1 (best) and last1 (worst in top-k)
+        if(!res.empty()) {
+            float top1_dist = res[0].first;  // Best result (smallest distance)
+            float last1_dist;
+            if(res.size() >= k) {
+                last1_dist = res[k - 1].first;  // Worst in top-k
+            } else {
+                last1_dist = res.back().first;  // Last result if less than k
+            }
+            metrics.top1_last1_diff = last1_dist - top1_dist;
+        } else {
+            metrics.top1_last1_diff = 0.0f;
+        }
+        
+        // Early-vs-Final Improvement Ratio
+        if(metrics.d_worst_early + eps > 0) {
+            metrics.delta_improve = (metrics.d_worst_early - metrics.d_worst_final) / (metrics.d_worst_early + eps);
+        } else {
+            metrics.delta_improve = 0.0f;
+        }
+        
+        q->releaseVisitedList();
+        return std::make_tuple(res, ndc, metrics);
+    }
+
     // Test-friendly accessors
     size_t getMEX() const { return MEX; }
     std::shared_mutex& getNodeLock(id_t id) { return node_locks[id]; }

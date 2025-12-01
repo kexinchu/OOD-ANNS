@@ -1,0 +1,1554 @@
+free(): double free detected in tcache 2
+Aborted (core dumped)
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+Aborted (core dumped)
+=== NGFix Selective Optimization Test ===
+Base Index: /workspace/OOD-ANNS/NGFix/data/t2i-10M/t2i_10M_HNSWBottom_M16_efC500_MEX48.index
+Full NGFix Index (Control): /workspace/OOD-ANNS/NGFix/data/t2i-10M/t2i_10M_HNSW_NGFix_M16_efC500_MEX48_AKNN1500.index
+Train Queries: /workspace/RoarGraph/data/t2i-10M/query.train.10M.fbin
+Train GT: /workspace/RoarGraph/data/t2i-10M/train.gt.bin
+Test Queries: /workspace/RoarGraph/data/t2i-10M/query.10k.fbin
+Test GT: /workspace/RoarGraph/data/t2i-10M/groundtruth-computed.10k.ibin
+Result Directory: /workspace/OOD-ANNS/NGFix/data/t2i-10M/selective_optimization_results
+
+=== Configuration ===
+Base index path: /workspace/OOD-ANNS/NGFix/data/t2i-10M/t2i_10M_HNSWBottom_M16_efC500_MEX48.index
+Train query path: /workspace/RoarGraph/data/t2i-10M/query.train.10M.fbin
+Train GT path: /workspace/RoarGraph/data/t2i-10M/train.gt.bin
+Test query path: /workspace/RoarGraph/data/t2i-10M/query.10k.fbin
+Test GT path: /workspace/RoarGraph/data/t2i-10M/groundtruth-computed.10k.ibin
+Full NGFix index path: /workspace/OOD-ANNS/NGFix/data/t2i-10M/t2i_10M_HNSW_NGFix_M16_efC500_MEX48_AKNN1500.index
+K: 100
+efSearch: 100
+Num test queries: 10000
+
+load data /workspace/RoarGraph/data/t2i-10M/query.train.10M.fbin
+dimension: 200  number: 10000000
+load data /workspace/RoarGraph/data/t2i-10M/train.gt.bin
+dimension: 100  number: 10000000
+load data /workspace/RoarGraph/data/t2i-10M/query.10k.fbin
+dimension: 200  number: 10000
+load data /workspace/RoarGraph/data/t2i-10M/groundtruth-computed.10k.ibin
+dimension: 500  number: 10000
+Loaded 10000000 training queries
+Loaded 10000 test queries
+Vector dimension: 200
+
+=== Loading Base Index ===
+current number of elements: 10000000
+max number of elements: 10000000
+Average out-degree: 22.1627
+Average Capacity: 23.5936
+entry point: 7596402
+
+=== Step 1: Calculating recall for all training queries ===
+  Processing training query 100000/10000000
+  Processing training query 200000/10000000
+  Processing training query 300000/10000000
+  Processing training query 400000/10000000
+  Processing training query 500000/10000000
+  Processing training query 600000/10000000
+  Processing training query 700000/10000000
+  Processing training query 800000/10000000
+  Processing training query 900000/10000000
+  Processing training query 1000000/10000000
+  Processing training query 1100000/10000000
+  Processing training query 1200000/10000000
+  Processing training query 1300000/10000000
+  Processing training query 1400000/10000000
+  Processing training query 1500000/10000000
+  Processing training query 1600000/10000000
+  Processing training query 1700000/10000000
+  Processing training query 1800000/10000000
+  Processing training query 1900000/10000000
+  Processing training query 2000000/10000000
+  Processing training query 2100000/10000000
+  Processing training query 2200000/10000000
+  Processing training query 2300000/10000000
+  Processing training query 2400000/10000000
+  Processing training query 2500000/10000000
+  Processing training query 2600000/10000000
+  Processing training query 2700000/10000000
+  Processing training query 2800000/10000000
+  Processing training query 2900000/10000000
+  Processing training query 3000000/10000000
+  Processing training query 3100000/10000000
+  Processing training query 3200000/10000000
+  Processing training query 3300000/10000000
+  Processing training query 3400000/10000000
+  Processing training query 3500000/10000000
+  Processing training query 3600000/10000000
+  Processing training query 3700000/10000000
+  Processing training query 3800000/10000000
+  Processing training query 3900000/10000000
+  Processing training query 4000000/10000000
+  Processing training query 4100000/10000000
+  Processing training query 4200000/10000000
+  Processing training query 4300000/10000000
+  Processing training query 4400000/10000000
+  Processing training query 4500000/10000000
+  Processing training query 4600000/10000000
+  Processing training query 4700000/10000000
+  Processing training query 4800000/10000000
+  Processing training query 4900000/10000000
+  Processing training query 5000000/10000000
+  Processing training query 5100000/10000000
+  Processing training query 5200000/10000000
+  Processing training query 5300000/10000000
+  Processing training query 5400000/10000000
+  Processing training query 5500000/10000000
+  Processing training query 5600000/10000000
+  Processing training query 5700000/10000000
+  Processing training query 5800000/10000000
+  Processing training query 5900000/10000000
+  Processing training query 6000000/10000000
+  Processing training query 6100000/10000000
+  Processing training query 6200000/10000000
+  Processing training query 6300000/10000000
+  Processing training query 6400000/10000000
+  Processing training query 6500000/10000000
+  Processing training query 6600000/10000000
+  Processing training query 6700000/10000000
+  Processing training query 6800000/10000000
+  Processing training query 6900000/10000000
+  Processing training query 7000000/10000000
+  Processing training query 7100000/10000000
+  Processing training query 7200000/10000000
+  Processing training query 7300000/10000000
+  Processing training query 7400000/10000000
+  Processing training query 7500000/10000000
+  Processing training query 7600000/10000000
+  Processing training query 7700000/10000000
+  Processing training query 7800000/10000000
+  Processing training query 7900000/10000000
+  Processing training query 8000000/10000000
+  Processing training query 8100000/10000000
+  Processing training query 8200000/10000000
+  Processing training query 8300000/10000000
+  Processing training query 8400000/10000000
+  Processing training query 8500000/10000000
+  Processing training query 8600000/10000000
+  Processing training query 8700000/10000000
+  Processing training query 8800000/10000000
+  Processing training query 8900000/10000000
+  Processing training query 9000000/10000000
+  Processing training query 9100000/10000000
+  Processing training query 9200000/10000000
+  Processing training query 9300000/10000000
+  Processing training query 9400000/10000000
+  Processing training query 9500000/10000000
+  Processing training query 9600000/10000000
+  Processing training query 9700000/10000000
+  Processing training query 9800000/10000000
+  Processing training query 9900000/10000000
+Sorted 10000000 training queries by recall (low to high)
+Min recall: 0
+Max recall: 1
+Median recall: 0.81
+
+=== Step 2: Testing Control Group (Full NGFix Index) ===
+Full NGFix index info:
+current number of elements: 10000000
+max number of elements: 10000000
+Average out-degree: 43.2198
+Average Capacity: 45.94
+entry point: 7596402
+  Testing query 100/10000
+  Testing query 200/10000
+  Testing query 300/10000
+  Testing query 400/10000
+  Testing query 500/10000
+  Testing query 600/10000
+  Testing query 700/10000
+  Testing query 800/10000
+  Testing query 900/10000
+  Testing query 1000/10000
+  Testing query 1100/10000
+  Testing query 1200/10000
+  Testing query 1300/10000
+  Testing query 1400/10000
+  Testing query 1500/10000
+  Testing query 1600/10000
+  Testing query 1700/10000
+  Testing query 1800/10000
+  Testing query 1900/10000
+  Testing query 2000/10000
+  Testing query 2100/10000
+  Testing query 2200/10000
+  Testing query 2300/10000
+  Testing query 2400/10000
+  Testing query 2500/10000
+  Testing query 2600/10000
+  Testing query 2700/10000
+  Testing query 2800/10000
+  Testing query 2900/10000
+  Testing query 3000/10000
+  Testing query 3100/10000
+  Testing query 3200/10000
+  Testing query 3300/10000
+  Testing query 3400/10000
+  Testing query 3500/10000
+  Testing query 3600/10000
+  Testing query 3700/10000
+  Testing query 3800/10000
+  Testing query 3900/10000
+  Testing query 4000/10000
+  Testing query 4100/10000
+  Testing query 4200/10000
+  Testing query 4300/10000
+  Testing query 4400/10000
+  Testing query 4500/10000
+  Testing query 4600/10000
+  Testing query 4700/10000
+  Testing query 4800/10000
+  Testing query 4900/10000
+  Testing query 5000/10000
+  Testing query 5100/10000
+  Testing query 5200/10000
+  Testing query 5300/10000
+  Testing query 5400/10000
+  Testing query 5500/10000
+  Testing query 5600/10000
+  Testing query 5700/10000
+  Testing query 5800/10000
+  Testing query 5900/10000
+  Testing query 6000/10000
+  Testing query 6100/10000
+  Testing query 6200/10000
+  Testing query 6300/10000
+  Testing query 6400/10000
+  Testing query 6500/10000
+  Testing query 6600/10000
+  Testing query 6700/10000
+  Testing query 6800/10000
+  Testing query 6900/10000
+  Testing query 7000/10000
+  Testing query 7100/10000
+  Testing query 7200/10000
+  Testing query 7300/10000
+  Testing query 7400/10000
+  Testing query 7500/10000
+  Testing query 7600/10000
+  Testing query 7700/10000
+  Testing query 7800/10000
+  Testing query 7900/10000
+  Testing query 8000/10000
+  Testing query 8100/10000
+  Testing query 8200/10000
+  Testing query 8300/10000
+  Testing query 8400/10000
+  Testing query 8500/10000
+  Testing query 8600/10000
+  Testing query 8700/10000
+  Testing query 8800/10000
+  Testing query 8900/10000
+  Testing query 9000/10000
+  Testing query 9100/10000
+  Testing query 9200/10000
+  Testing query 9300/10000
+  Testing query 9400/10000
+  Testing query 9500/10000
+  Testing query 9600/10000
+  Testing query 9700/10000
+  Testing query 9800/10000
+  Testing query 9900/10000
+Control group results:
+  Avg Recall: 0.921263
+  Avg Latency: 1.1837 ms
+  Avg Accessed Nodes: 3860.79
+  Mean Out-Degree: 43.2198
+
+=== Step 3: Iterative Optimization Process ===
+Will optimize in steps of 1% (100000 queries per step)
+Will test after each 1% completion
+Target percentages for summary: 5% 10% 15% 20% 25% 30% 
+All results will be saved to: /workspace/OOD-ANNS/NGFix/data/t2i-10M/selective_optimization_results/ngfix_all_results_1percent_intervals.csv
+
+
+=== Recalculating recall on current index (used 0 queries) ===
+=== Recalculation: Calculating recall for all training queries ===
+  Processing training query 100000/10000000
+  Processing training query 200000/10000000
+  Processing training query 300000/10000000
+  Processing training query 400000/10000000
+  Processing training query 500000/10000000
+  Processing training query 600000/10000000
+  Processing training query 700000/10000000
+  Processing training query 800000/10000000
+  Processing training query 900000/10000000
+  Processing training query 1000000/10000000
+  Processing training query 1100000/10000000
+  Processing training query 1200000/10000000
+  Processing training query 1300000/10000000
+  Processing training query 1400000/10000000
+  Processing training query 1500000/10000000
+  Processing training query 1600000/10000000
+  Processing training query 1700000/10000000
+  Processing training query 1800000/10000000
+  Processing training query 1900000/10000000
+  Processing training query 2000000/10000000
+  Processing training query 2100000/10000000
+  Processing training query 2200000/10000000
+  Processing training query 2300000/10000000
+  Processing training query 2400000/10000000
+  Processing training query 2500000/10000000
+  Processing training query 2600000/10000000
+  Processing training query 2700000/10000000
+  Processing training query 2800000/10000000
+  Processing training query 2900000/10000000
+  Processing training query 3000000/10000000
+  Processing training query 3100000/10000000
+  Processing training query 3200000/10000000
+  Processing training query 3300000/10000000
+  Processing training query 3400000/10000000
+  Processing training query 3500000/10000000
+  Processing training query 3600000/10000000
+  Processing training query 3700000/10000000
+  Processing training query 3800000/10000000
+  Processing training query 3900000/10000000
+  Processing training query 4000000/10000000
+  Processing training query 4100000/10000000
+  Processing training query 4200000/10000000
+  Processing training query 4300000/10000000
+  Processing training query 4400000/10000000
+  Processing training query 4500000/10000000
+  Processing training query 4600000/10000000
+  Processing training query 4700000/10000000
+  Processing training query 4800000/10000000
+  Processing training query 4900000/10000000
+  Processing training query 5000000/10000000
+  Processing training query 5100000/10000000
+  Processing training query 5200000/10000000
+  Processing training query 5300000/10000000
+  Processing training query 5400000/10000000
+  Processing training query 5500000/10000000
+  Processing training query 5600000/10000000
+  Processing training query 5700000/10000000
+  Processing training query 5800000/10000000
+  Processing training query 5900000/10000000
+  Processing training query 6000000/10000000
+  Processing training query 6100000/10000000
+  Processing training query 6200000/10000000
+  Processing training query 6300000/10000000
+  Processing training query 6400000/10000000
+  Processing training query 6500000/10000000
+  Processing training query 6600000/10000000
+  Processing training query 6700000/10000000
+  Processing training query 6800000/10000000
+  Processing training query 6900000/10000000
+  Processing training query 7000000/10000000
+  Processing training query 7100000/10000000
+  Processing training query 7200000/10000000
+  Processing training query 7300000/10000000
+  Processing training query 7400000/10000000
+  Processing training query 7500000/10000000
+  Processing training query 7600000/10000000
+  Processing training query 7700000/10000000
+  Processing training query 7800000/10000000
+  Processing training query 7900000/10000000
+  Processing training query 8000000/10000000
+  Processing training query 8100000/10000000
+  Processing training query 8200000/10000000
+  Processing training query 8300000/10000000
+  Processing training query 8400000/10000000
+  Processing training query 8500000/10000000
+  Processing training query 8600000/10000000
+  Processing training query 8700000/10000000
+  Processing training query 8800000/10000000
+  Processing training query 8900000/10000000
+  Processing training query 9000000/10000000
+  Processing training query 9100000/10000000
+  Processing training query 9200000/10000000
+  Processing training query 9300000/10000000
+  Processing training query 9400000/10000000
+  Processing training query 9500000/10000000
+  Processing training query 9600000/10000000
+  Processing training query 9700000/10000000
+  Processing training query 9800000/10000000
+  Processing training query 9900000/10000000
+Sorted 10000000 training queries by recall (low to high)
+Min recall: 0
+Max recall: 1
+Median recall: 0.81
+
+Selected 100000 new queries for optimization
+Total queries used so far: 100000
+Optimizing index with selected queries...
+  Optimizing query 100/100000
+  Optimizing query 200/100000
+  Optimizing query 300/100000
+  Optimizing query 400/100000
+  Optimizing query 500/100000
+  Optimizing query 600/100000
+  Optimizing query 700/100000
+  Optimizing query 800/100000
+  Optimizing query 900/100000
+  Optimizing query 1000/100000
+  Optimizing query 1100/100000
+  Optimizing query 1200/100000
+  Optimizing query 1300/100000
+  Optimizing query 1400/100000
+  Optimizing query 1500/100000
+  Optimizing query 1600/100000
+  Optimizing query 1700/100000
+  Optimizing query 1800/100000
+  Optimizing query 1900/100000
+  Optimizing query 2000/100000
+  Optimizing query 2100/100000
+  Optimizing query 2200/100000
+  Optimizing query 2300/100000
+  Optimizing query 2400/100000
+  Optimizing query 2500/100000
+  Optimizing query 2600/100000
+  Optimizing query 2700/100000
+  Optimizing query 2800/100000
+  Optimizing query 2900/100000
+  Optimizing query 3000/100000
+  Optimizing query 3100/100000
+  Optimizing query 3200/100000
+  Optimizing query 3300/100000
+  Optimizing query 3400/100000
+  Optimizing query 3500/100000
+  Optimizing query 3600/100000
+  Optimizing query 3700/100000
+  Optimizing query 3800/100000
+  Optimizing query 3900/100000
+  Optimizing query 4000/100000
+  Optimizing query 4100/100000
+  Optimizing query 4200/100000
+  Optimizing query 4300/100000
+  Optimizing query 4400/100000
+  Optimizing query 4500/100000
+  Optimizing query 4600/100000
+  Optimizing query 4700/100000
+  Optimizing query 4800/100000
+  Optimizing query 4900/100000
+  Optimizing query 5000/100000
+  Optimizing query 5100/100000
+  Optimizing query 5200/100000
+  Optimizing query 5300/100000
+  Optimizing query 5400/100000
+  Optimizing query 5500/100000
+  Optimizing query 5600/100000
+  Optimizing query 5700/100000
+  Optimizing query 5800/100000
+  Optimizing query 5900/100000
+  Optimizing query 6000/100000
+  Optimizing query 6100/100000
+  Optimizing query 6200/100000
+  Optimizing query 6300/100000
+  Optimizing query 6400/100000
+  Optimizing query 6500/100000
+  Optimizing query 6600/100000
+  Optimizing query 6700/100000
+  Optimizing query 6800/100000
+  Optimizing query 6900/100000
+  Optimizing query 7000/100000
+  Optimizing query 7100/100000
+  Optimizing query 7200/100000
+  Optimizing query 7300/100000
+  Optimizing query 7400/100000
+  Optimizing query 7500/100000
+  Optimizing query 7600/100000
+  Optimizing query 7700/100000
+  Optimizing query 7800/100000
+  Optimizing query 7900/100000
+  Optimizing query 8000/100000
+  Optimizing query 8100/100000
+  Optimizing query 8200/100000
+  Optimizing query 8300/100000
+  Optimizing query 8400/100000
+  Optimizing query 8500/100000
+  Optimizing query 8600/100000
+  Optimizing query 8700/100000
+  Optimizing query 8800/100000
+  Optimizing query 8900/100000
+  Optimizing query 9000/100000
+  Optimizing query 9100/100000
+  Optimizing query 9200/100000
+  Optimizing query 9300/100000
+  Optimizing query 9400/100000
+  Optimizing query 9500/100000
+  Optimizing query 9600/100000
+  Optimizing query 9700/100000
+  Optimizing query 9800/100000
+  Optimizing query 9900/100000
+  Optimizing query 10000/100000
+  Optimizing query 10100/100000
+  Optimizing query 10200/100000
+  Optimizing query 10300/100000
+  Optimizing query 10400/100000
+  Optimizing query 10500/100000
+  Optimizing query 10600/100000
+  Optimizing query 10700/100000
+  Optimizing query 10800/100000
+  Optimizing query 10900/100000
+  Optimizing query 11000/100000
+  Optimizing query 11100/100000
+  Optimizing query 11200/100000
+  Optimizing query 11300/100000
+  Optimizing query 11400/100000
+  Optimizing query 11500/100000
+  Optimizing query 11600/100000
+  Optimizing query 11700/100000
+  Optimizing query 11800/100000
+  Optimizing query 11900/100000
+  Optimizing query 12000/100000
+  Optimizing query 12100/100000
+  Optimizing query 12200/100000
+  Optimizing query 12300/100000
+  Optimizing query 12400/100000
+  Optimizing query 12500/100000
+  Optimizing query 12600/100000
+  Optimizing query 12700/100000
+  Optimizing query 12800/100000
+  Optimizing query 12900/100000
+  Optimizing query 13000/100000
+  Optimizing query 13100/100000
+  Optimizing query 13200/100000
+  Optimizing query 13300/100000
+  Optimizing query 13400/100000
+  Optimizing query 13500/100000
+  Optimizing query 13600/100000
+  Optimizing query 13700/100000
+  Optimizing query 13800/100000
+  Optimizing query 13900/100000
+  Optimizing query 14000/100000
+  Optimizing query 14100/100000
+  Optimizing query 14200/100000
+  Optimizing query 14300/100000
+  Optimizing query 14400/100000
+  Optimizing query 14500/100000
+  Optimizing query 14600/100000
+  Optimizing query 14700/100000
+  Optimizing query 14800/100000
+  Optimizing query 14900/100000
+  Optimizing query 15000/100000
+  Optimizing query 15100/100000
+  Optimizing query 15200/100000
+  Optimizing query 15300/100000
+  Optimizing query 15400/100000
+  Optimizing query 15500/100000
+  Optimizing query 15600/100000
+  Optimizing query 15700/100000
+  Optimizing query 15800/100000
+  Optimizing query 15900/100000
+  Optimizing query 16000/100000
+  Optimizing query 16100/100000
+  Optimizing query 16200/100000
+  Optimizing query 16300/100000
+  Optimizing query 16400/100000
+  Optimizing query 16500/100000
+  Optimizing query 16600/100000
+  Optimizing query 16700/100000
+  Optimizing query 16800/100000
+  Optimizing query 16900/100000
+  Optimizing query 17000/100000
+  Optimizing query 17100/100000
+  Optimizing query 17200/100000
+  Optimizing query 17300/100000
+  Optimizing query 17400/100000
+  Optimizing query 17500/100000
+  Optimizing query 17600/100000
+  Optimizing query 17700/100000
+  Optimizing query 17800/100000
+  Optimizing query 17900/100000
+  Optimizing query 18000/100000
+  Optimizing query 18100/100000
+  Optimizing query 18200/100000
+  Optimizing query 18300/100000
+  Optimizing query 18400/100000
+  Optimizing query 18500/100000
+  Optimizing query 18600/100000
+  Optimizing query 18700/100000
+  Optimizing query 18800/100000
+  Optimizing query 18900/100000
+  Optimizing query 19000/100000
+  Optimizing query 19100/100000
+  Optimizing query 19200/100000
+  Optimizing query 19300/100000
+  Optimizing query 19400/100000
+  Optimizing query 19500/100000
+  Optimizing query 19600/100000
+  Optimizing query 19700/100000
+  Optimizing query 19800/100000
+  Optimizing query 19900/100000
+  Optimizing query 20000/100000
+  Optimizing query 20100/100000
+  Optimizing query 20200/100000
+  Optimizing query 20300/100000
+  Optimizing query 20400/100000
+  Optimizing query 20500/100000
+  Optimizing query 20600/100000
+  Optimizing query 20700/100000
+  Optimizing query 20800/100000
+  Optimizing query 20900/100000
+  Optimizing query 21000/100000
+  Optimizing query 21100/100000
+  Optimizing query 21200/100000
+  Optimizing query 21300/100000
+  Optimizing query 21400/100000
+  Optimizing query 21500/100000
+  Optimizing query 21600/100000
+  Optimizing query 21700/100000
+  Optimizing query 21800/100000
+  Optimizing query 21900/100000
+  Optimizing query 22000/100000
+  Optimizing query 22100/100000
+  Optimizing query 22200/100000
+  Optimizing query 22300/100000
+  Optimizing query 22400/100000
+  Optimizing query 22500/100000
+  Optimizing query 22600/100000
+  Optimizing query 22700/100000
+  Optimizing query 22800/100000
+  Optimizing query 22900/100000
+  Optimizing query 23000/100000
+  Optimizing query 23100/100000
+  Optimizing query 23200/100000
+  Optimizing query 23300/100000
+  Optimizing query 23400/100000
+  Optimizing query 23500/100000
+  Optimizing query 23600/100000
+  Optimizing query 23700/100000
+  Optimizing query 23800/100000
+  Optimizing query 23900/100000
+  Optimizing query 24000/100000
+  Optimizing query 24100/100000
+  Optimizing query 24200/100000
+  Optimizing query 24300/100000
+  Optimizing query 24400/100000
+  Optimizing query 24500/100000
+  Optimizing query 24600/100000
+  Optimizing query 24700/100000
+  Optimizing query 24800/100000
+  Optimizing query 24900/100000
+  Optimizing query 25000/100000
+  Optimizing query 25100/100000
+  Optimizing query 25200/100000
+  Optimizing query 25300/100000
+  Optimizing query 25400/100000
+  Optimizing query 25500/100000
+  Optimizing query 25600/100000
+  Optimizing query 25700/100000
+  Optimizing query 25800/100000
+  Optimizing query 25900/100000
+  Optimizing query 26000/100000
+  Optimizing query 26100/100000
+  Optimizing query 26200/100000
+  Optimizing query 26300/100000
+  Optimizing query 26400/100000
+  Optimizing query 26500/100000
+  Optimizing query 26600/100000
+  Optimizing query 26700/100000
+  Optimizing query 26800/100000
+  Optimizing query 26900/100000
+  Optimizing query 27000/100000
+  Optimizing query 27100/100000
+  Optimizing query 27200/100000
+  Optimizing query 27300/100000
+  Optimizing query 27400/100000
+  Optimizing query 27500/100000
+  Optimizing query 27600/100000
+  Optimizing query 27700/100000
+  Optimizing query 27800/100000
+  Optimizing query 27900/100000
+  Optimizing query 28000/100000
+  Optimizing query 28100/100000
+  Optimizing query 28200/100000
+  Optimizing query 28300/100000
+  Optimizing query 28400/100000
+  Optimizing query 28500/100000
+  Optimizing query 28600/100000
+  Optimizing query 28700/100000
+  Optimizing query 28800/100000
+  Optimizing query 28900/100000
+  Optimizing query 29000/100000
+  Optimizing query 29100/100000
+  Optimizing query 29200/100000
+  Optimizing query 29300/100000
+  Optimizing query 29400/100000
+  Optimizing query 29500/100000
+  Optimizing query 29600/100000
+  Optimizing query 29700/100000
+  Optimizing query 29800/100000
+  Optimizing query 29900/100000
+  Optimizing query 30000/100000
+  Optimizing query 30100/100000
+  Optimizing query 30200/100000
+  Optimizing query 30300/100000
+  Optimizing query 30400/100000
+  Optimizing query 30500/100000
+  Optimizing query 30600/100000
+  Optimizing query 30700/100000
+  Optimizing query 30800/100000
+  Optimizing query 30900/100000
+  Optimizing query 31000/100000
+  Optimizing query 31100/100000
+  Optimizing query 31200/100000
+  Optimizing query 31300/100000
+  Optimizing query 31400/100000
+  Optimizing query 31500/100000
+  Optimizing query 31600/100000
+  Optimizing query 31700/100000
+  Optimizing query 31800/100000
+  Optimizing query 31900/100000
+  Optimizing query 32000/100000
+  Optimizing query 32100/100000
+  Optimizing query 32200/100000
+  Optimizing query 32300/100000
+  Optimizing query 32400/100000
+  Optimizing query 32500/100000
+  Optimizing query 32600/100000
+  Optimizing query 32700/100000
+  Optimizing query 32800/100000
+  Optimizing query 32900/100000
+  Optimizing query 33000/100000
+  Optimizing query 33100/100000
+  Optimizing query 33200/100000
+  Optimizing query 33300/100000
+  Optimizing query 33400/100000
+  Optimizing query 33500/100000
+  Optimizing query 33600/100000
+  Optimizing query 33700/100000
+  Optimizing query 33800/100000
+  Optimizing query 33900/100000
+  Optimizing query 34000/100000
+  Optimizing query 34100/100000
+  Optimizing query 34200/100000
+  Optimizing query 34300/100000
+  Optimizing query 34400/100000
+  Optimizing query 34500/100000
+  Optimizing query 34600/100000
+  Optimizing query 34700/100000
+  Optimizing query 34800/100000
+  Optimizing query 34900/100000
+  Optimizing query 35000/100000
+  Optimizing query 35100/100000
+  Optimizing query 35200/100000
+  Optimizing query 35300/100000
+  Optimizing query 35400/100000
+  Optimizing query 35500/100000
+  Optimizing query 35600/100000
+  Optimizing query 35700/100000
+  Optimizing query 35800/100000
+  Optimizing query 35900/100000
+  Optimizing query 36000/100000
+  Optimizing query 36100/100000
+  Optimizing query 36200/100000
+  Optimizing query 36300/100000
+  Optimizing query 36400/100000
+  Optimizing query 36500/100000
+  Optimizing query 36600/100000
+  Optimizing query 36700/100000
+  Optimizing query 36800/100000
+  Optimizing query 36900/100000
+  Optimizing query 37000/100000
+  Optimizing query 37100/100000
+  Optimizing query 37200/100000
+  Optimizing query 37300/100000
+  Optimizing query 37400/100000
+  Optimizing query 37500/100000
+  Optimizing query 37600/100000
+  Optimizing query 37700/100000
+  Optimizing query 37800/100000
+  Optimizing query 37900/100000
+  Optimizing query 38000/100000
+  Optimizing query 38100/100000
+  Optimizing query 38200/100000
+  Optimizing query 38300/100000
+  Optimizing query 38400/100000
+  Optimizing query 38500/100000
+  Optimizing query 38600/100000
+  Optimizing query 38700/100000
+  Optimizing query 38800/100000
+  Optimizing query 38900/100000
+  Optimizing query 39000/100000
+  Optimizing query 39100/100000
+  Optimizing query 39200/100000
+  Optimizing query 39300/100000
+  Optimizing query 39400/100000
+  Optimizing query 39500/100000
+  Optimizing query 39600/100000
+  Optimizing query 39700/100000
+  Optimizing query 39800/100000
+  Optimizing query 39900/100000
+  Optimizing query 40000/100000
+  Optimizing query 40100/100000
+  Optimizing query 40200/100000
+  Optimizing query 40300/100000
+  Optimizing query 40400/100000
+  Optimizing query 40500/100000
+  Optimizing query 40600/100000
+  Optimizing query 40700/100000
+  Optimizing query 40800/100000
+  Optimizing query 40900/100000
+  Optimizing query 41000/100000
+  Optimizing query 41100/100000
+  Optimizing query 41200/100000
+  Optimizing query 41300/100000
+  Optimizing query 41400/100000
+  Optimizing query 41500/100000
+  Optimizing query 41600/100000
+  Optimizing query 41700/100000
+  Optimizing query 41800/100000
+  Optimizing query 41900/100000
+  Optimizing query 42000/100000
+  Optimizing query 42100/100000
+  Optimizing query 42200/100000
+  Optimizing query 42300/100000
+  Optimizing query 42400/100000
+  Optimizing query 42500/100000
+  Optimizing query 42600/100000
+  Optimizing query 42700/100000
+  Optimizing query 42800/100000
+  Optimizing query 42900/100000
+  Optimizing query 43000/100000
+  Optimizing query 43100/100000
+  Optimizing query 43200/100000
+  Optimizing query 43300/100000
+  Optimizing query 43400/100000
+  Optimizing query 43500/100000
+  Optimizing query 43600/100000
+  Optimizing query 43700/100000
+  Optimizing query 43800/100000
+  Optimizing query 43900/100000
+  Optimizing query 44000/100000
+  Optimizing query 44100/100000
+  Optimizing query 44200/100000
+  Optimizing query 44300/100000
+  Optimizing query 44400/100000
+  Optimizing query 44500/100000
+  Optimizing query 44600/100000
+  Optimizing query 44700/100000
+  Optimizing query 44800/100000
+  Optimizing query 44900/100000
+  Optimizing query 45000/100000
+  Optimizing query 45100/100000
+  Optimizing query 45200/100000
+  Optimizing query 45300/100000
+  Optimizing query 45400/100000
+  Optimizing query 45500/100000
+  Optimizing query 45600/100000
+  Optimizing query 45700/100000
+  Optimizing query 45800/100000
+  Optimizing query 45900/100000
+  Optimizing query 46000/100000
+  Optimizing query 46100/100000
+  Optimizing query 46200/100000
+  Optimizing query 46300/100000
+  Optimizing query 46400/100000
+  Optimizing query 46500/100000
+  Optimizing query 46600/100000
+  Optimizing query 46700/100000
+  Optimizing query 46800/100000
+  Optimizing query 46900/100000
+  Optimizing query 47000/100000
+  Optimizing query 47100/100000
+  Optimizing query 47200/100000
+  Optimizing query 47300/100000
+  Optimizing query 47400/100000
+  Optimizing query 47500/100000
+  Optimizing query 47600/100000
+  Optimizing query 47700/100000
+  Optimizing query 47800/100000
+  Optimizing query 47900/100000
+  Optimizing query 48000/100000
+  Optimizing query 48100/100000
+  Optimizing query 48200/100000
+  Optimizing query 48300/100000
+  Optimizing query 48400/100000
+  Optimizing query 48500/100000
+  Optimizing query 48600/100000
+  Optimizing query 48700/100000
+  Optimizing query 48800/100000
+  Optimizing query 48900/100000
+  Optimizing query 49000/100000
+  Optimizing query 49100/100000
+  Optimizing query 49200/100000
+  Optimizing query 49300/100000
+  Optimizing query 49400/100000
+  Optimizing query 49500/100000
+  Optimizing query 49600/100000
+  Optimizing query 49700/100000
+  Optimizing query 49800/100000
+  Optimizing query 49900/100000
+  Optimizing query 50000/100000
+  Optimizing query 50100/100000
+  Optimizing query 50200/100000
+  Optimizing query 50300/100000
+  Optimizing query 50400/100000
+  Optimizing query 50500/100000
+  Optimizing query 50600/100000
+  Optimizing query 50700/100000
+  Optimizing query 50800/100000
+  Optimizing query 50900/100000
+  Optimizing query 51000/100000
+  Optimizing query 51100/100000
+  Optimizing query 51200/100000
+  Optimizing query 51300/100000
+  Optimizing query 51400/100000
+  Optimizing query 51500/100000
+  Optimizing query 51600/100000
+  Optimizing query 51700/100000
+  Optimizing query 51800/100000
+  Optimizing query 51900/100000
+  Optimizing query 52000/100000
+  Optimizing query 52100/100000
+  Optimizing query 52200/100000
+  Optimizing query 52300/100000
+  Optimizing query 52400/100000
+  Optimizing query 52500/100000
+  Optimizing query 52600/100000
+  Optimizing query 52700/100000
+  Optimizing query 52800/100000
+  Optimizing query 52900/100000
+  Optimizing query 53000/100000
+  Optimizing query 53100/100000
+  Optimizing query 53200/100000
+  Optimizing query 53300/100000
+  Optimizing query 53400/100000
+  Optimizing query 53500/100000
+  Optimizing query 53600/100000
+  Optimizing query 53700/100000
+  Optimizing query 53800/100000
+  Optimizing query 53900/100000
+  Optimizing query 54000/100000
+  Optimizing query 54100/100000
+  Optimizing query 54200/100000
+  Optimizing query 54300/100000
+  Optimizing query 54400/100000
+  Optimizing query 54500/100000
+  Optimizing query 54600/100000
+  Optimizing query 54700/100000
+  Optimizing query 54800/100000
+  Optimizing query 54900/100000
+  Optimizing query 55000/100000
+  Optimizing query 55100/100000
+  Optimizing query 55200/100000
+  Optimizing query 55300/100000
+  Optimizing query 55400/100000
+  Optimizing query 55500/100000
+  Optimizing query 55600/100000
+  Optimizing query 55700/100000
+  Optimizing query 55800/100000
+  Optimizing query 55900/100000
+  Optimizing query 56000/100000
+  Optimizing query 56100/100000
+  Optimizing query 56200/100000
+  Optimizing query 56300/100000
+  Optimizing query 56400/100000
+  Optimizing query 56500/100000
+  Optimizing query 56600/100000
+  Optimizing query 56700/100000
+  Optimizing query 56800/100000
+  Optimizing query 56900/100000
+  Optimizing query 57000/100000
+  Optimizing query 57100/100000
+  Optimizing query 57200/100000
+  Optimizing query 57300/100000
+  Optimizing query 57400/100000
+  Optimizing query 57500/100000
+  Optimizing query 57600/100000
+  Optimizing query 57700/100000
+  Optimizing query 57800/100000
+  Optimizing query 57900/100000
+  Optimizing query 58000/100000
+  Optimizing query 58100/100000
+  Optimizing query 58200/100000
+  Optimizing query 58300/100000
+  Optimizing query 58400/100000
+  Optimizing query 58500/100000
+  Optimizing query 58600/100000
+  Optimizing query 58700/100000
+  Optimizing query 58800/100000
+  Optimizing query 58900/100000
+  Optimizing query 59000/100000
+  Optimizing query 59100/100000
+  Optimizing query 59200/100000
+  Optimizing query 59300/100000
+  Optimizing query 59400/100000
+  Optimizing query 59500/100000
+  Optimizing query 59600/100000
+  Optimizing query 59700/100000
+  Optimizing query 59800/100000
+  Optimizing query 59900/100000
+  Optimizing query 60000/100000
+  Optimizing query 60100/100000
+  Optimizing query 60200/100000
+  Optimizing query 60300/100000
+  Optimizing query 60400/100000
+  Optimizing query 60500/100000
+  Optimizing query 60600/100000
+  Optimizing query 60700/100000
+  Optimizing query 60800/100000
+  Optimizing query 60900/100000
+  Optimizing query 61000/100000
+  Optimizing query 61100/100000
+  Optimizing query 61200/100000
+  Optimizing query 61300/100000
+  Optimizing query 61400/100000
+  Optimizing query 61500/100000
+  Optimizing query 61600/100000
+  Optimizing query 61700/100000
+  Optimizing query 61800/100000
+  Optimizing query 61900/100000
+  Optimizing query 62000/100000
+  Optimizing query 62100/100000
+  Optimizing query 62200/100000
+  Optimizing query 62300/100000
+  Optimizing query 62400/100000
+  Optimizing query 62500/100000
+  Optimizing query 62600/100000
+  Optimizing query 62700/100000
+  Optimizing query 62800/100000
+  Optimizing query 62900/100000
+  Optimizing query 63000/100000
+  Optimizing query 63100/100000
+  Optimizing query 63200/100000
+  Optimizing query 63300/100000
+  Optimizing query 63400/100000
+  Optimizing query 63500/100000
+  Optimizing query 63600/100000
+  Optimizing query 63700/100000
+  Optimizing query 63800/100000
+  Optimizing query 63900/100000
+  Optimizing query 64000/100000
+  Optimizing query 64100/100000
+  Optimizing query 64200/100000
+  Optimizing query 64300/100000
+  Optimizing query 64400/100000
+  Optimizing query 64500/100000
+  Optimizing query 64600/100000
+  Optimizing query 64700/100000
+  Optimizing query 64800/100000
+  Optimizing query 64900/100000
+  Optimizing query 65000/100000
+  Optimizing query 65100/100000
+  Optimizing query 65200/100000
+  Optimizing query 65300/100000
+  Optimizing query 65400/100000
+  Optimizing query 65500/100000
+  Optimizing query 65600/100000
+  Optimizing query 65700/100000
+  Optimizing query 65800/100000
+  Optimizing query 65900/100000
+  Optimizing query 66000/100000
+  Optimizing query 66100/100000
+  Optimizing query 66200/100000
+  Optimizing query 66300/100000
+  Optimizing query 66400/100000
+  Optimizing query 66500/100000
+  Optimizing query 66600/100000
+  Optimizing query 66700/100000
+  Optimizing query 66800/100000
+  Optimizing query 66900/100000
+  Optimizing query 67000/100000
+  Optimizing query 67100/100000
+  Optimizing query 67200/100000
+  Optimizing query 67300/100000
+  Optimizing query 67400/100000
+  Optimizing query 67500/100000
+  Optimizing query 67600/100000
+  Optimizing query 67700/100000
+  Optimizing query 67800/100000
+  Optimizing query 67900/100000
+  Optimizing query 68000/100000
+  Optimizing query 68100/100000
+  Optimizing query 68200/100000
+  Optimizing query 68300/100000
+  Optimizing query 68400/100000
+  Optimizing query 68500/100000
+  Optimizing query 68600/100000
+  Optimizing query 68700/100000
+  Optimizing query 68800/100000
+  Optimizing query 68900/100000
+  Optimizing query 69000/100000
+  Optimizing query 69100/100000
+  Optimizing query 69200/100000
+  Optimizing query 69300/100000
+  Optimizing query 69400/100000
+  Optimizing query 69500/100000
+  Optimizing query 69600/100000
+  Optimizing query 69700/100000
+  Optimizing query 69800/100000
+  Optimizing query 69900/100000
+  Optimizing query 70000/100000
+  Optimizing query 70100/100000
+  Optimizing query 70200/100000
+  Optimizing query 70300/100000
+  Optimizing query 70400/100000
+  Optimizing query 70500/100000
+  Optimizing query 70600/100000
+  Optimizing query 70700/100000
+  Optimizing query 70800/100000
+  Optimizing query 70900/100000
+  Optimizing query 71000/100000
+  Optimizing query 71100/100000
+  Optimizing query 71200/100000
+  Optimizing query 71300/100000
+  Optimizing query 71400/100000
+  Optimizing query 71500/100000
+  Optimizing query 71600/100000
+  Optimizing query 71700/100000
+  Optimizing query 71800/100000
+  Optimizing query 71900/100000
+  Optimizing query 72000/100000
+  Optimizing query 72100/100000
+  Optimizing query 72200/100000
+  Optimizing query 72300/100000
+  Optimizing query 72400/100000
+  Optimizing query 72500/100000
+  Optimizing query 72600/100000
+  Optimizing query 72700/100000
+  Optimizing query 72800/100000
+  Optimizing query 72900/100000
+  Optimizing query 73000/100000
+  Optimizing query 73100/100000
+  Optimizing query 73200/100000
+  Optimizing query 73300/100000
+  Optimizing query 73400/100000
+  Optimizing query 73500/100000
+  Optimizing query 73600/100000
+  Optimizing query 73700/100000
+  Optimizing query 73800/100000
+  Optimizing query 73900/100000
+  Optimizing query 74000/100000
+  Optimizing query 74100/100000
+  Optimizing query 74200/100000
+  Optimizing query 74300/100000
+  Optimizing query 74400/100000
+  Optimizing query 74500/100000
+  Optimizing query 74600/100000
+  Optimizing query 74700/100000
+  Optimizing query 74800/100000
+  Optimizing query 74900/100000
+  Optimizing query 75000/100000
+  Optimizing query 75100/100000
+  Optimizing query 75200/100000
+  Optimizing query 75300/100000
+  Optimizing query 75400/100000
+  Optimizing query 75500/100000
+  Optimizing query 75600/100000
+  Optimizing query 75700/100000
+  Optimizing query 75800/100000
+  Optimizing query 75900/100000
+  Optimizing query 76000/100000
+  Optimizing query 76100/100000
+  Optimizing query 76200/100000
+  Optimizing query 76300/100000
+  Optimizing query 76400/100000
+  Optimizing query 76500/100000
+  Optimizing query 76600/100000
+  Optimizing query 76700/100000
+  Optimizing query 76800/100000
+  Optimizing query 76900/100000
+  Optimizing query 77000/100000
+  Optimizing query 77100/100000
+  Optimizing query 77200/100000
+  Optimizing query 77300/100000
+  Optimizing query 77400/100000
+  Optimizing query 77500/100000
+  Optimizing query 77600/100000
+  Optimizing query 77700/100000
+  Optimizing query 77800/100000
+  Optimizing query 77900/100000
+  Optimizing query 78000/100000
+  Optimizing query 78100/100000
+  Optimizing query 78200/100000
+  Optimizing query 78300/100000
+  Optimizing query 78400/100000
+  Optimizing query 78500/100000
+  Optimizing query 78600/100000
+  Optimizing query 78700/100000
+  Optimizing query 78800/100000
+  Optimizing query 78900/100000
+  Optimizing query 79000/100000
+  Optimizing query 79100/100000
+  Optimizing query 79200/100000
+  Optimizing query 79300/100000
+  Optimizing query 79400/100000
+  Optimizing query 79500/100000
+  Optimizing query 79600/100000
+  Optimizing query 79700/100000
+  Optimizing query 79800/100000
+  Optimizing query 79900/100000
+  Optimizing query 80000/100000
+  Optimizing query 80100/100000
+  Optimizing query 80200/100000
+  Optimizing query 80300/100000
+  Optimizing query 80400/100000
+  Optimizing query 80500/100000
+  Optimizing query 80600/100000
+  Optimizing query 80700/100000
+  Optimizing query 80800/100000
+  Optimizing query 80900/100000
+  Optimizing query 81000/100000
+  Optimizing query 81100/100000
+  Optimizing query 81200/100000
+  Optimizing query 81300/100000
+  Optimizing query 81400/100000
+  Optimizing query 81500/100000
+  Optimizing query 81600/100000
+  Optimizing query 81700/100000
+  Optimizing query 81800/100000
+  Optimizing query 81900/100000
+  Optimizing query 82000/100000
+  Optimizing query 82100/100000
+  Optimizing query 82200/100000
+  Optimizing query 82300/100000
+  Optimizing query 82400/100000
+  Optimizing query 82500/100000
+  Optimizing query 82600/100000
+  Optimizing query 82700/100000
+  Optimizing query 82800/100000
+  Optimizing query 82900/100000
+  Optimizing query 83000/100000
+  Optimizing query 83100/100000
+  Optimizing query 83200/100000
+  Optimizing query 83300/100000
+  Optimizing query 83400/100000
+  Optimizing query 83500/100000
+  Optimizing query 83600/100000
+  Optimizing query 83700/100000
+  Optimizing query 83800/100000
+  Optimizing query 83900/100000
+  Optimizing query 84000/100000
+  Optimizing query 84100/100000
+  Optimizing query 84200/100000
+  Optimizing query 84300/100000
+  Optimizing query 84400/100000
+  Optimizing query 84500/100000
+  Optimizing query 84600/100000
+  Optimizing query 84700/100000
+  Optimizing query 84800/100000
+  Optimizing query 84900/100000
+  Optimizing query 85000/100000
+  Optimizing query 85100/100000
+  Optimizing query 85200/100000
+  Optimizing query 85300/100000
+  Optimizing query 85400/100000
+  Optimizing query 85500/100000
+  Optimizing query 85600/100000
+  Optimizing query 85700/100000
+  Optimizing query 85800/100000
+  Optimizing query 85900/100000
+  Optimizing query 86000/100000
+  Optimizing query 86100/100000
+  Optimizing query 86200/100000
+  Optimizing query 86300/100000
+  Optimizing query 86400/100000
+  Optimizing query 86500/100000
+  Optimizing query 86600/100000
+  Optimizing query 86700/100000
+  Optimizing query 86800/100000
+  Optimizing query 86900/100000
+  Optimizing query 87000/100000
+  Optimizing query 87100/100000
+  Optimizing query 87200/100000
+  Optimizing query 87300/100000
+  Optimizing query 87400/100000
+  Optimizing query 87500/100000
+  Optimizing query 87600/100000
+  Optimizing query 87700/100000
+  Optimizing query 87800/100000
+  Optimizing query 87900/100000
+  Optimizing query 88000/100000
+  Optimizing query 88100/100000
+  Optimizing query 88200/100000
+  Optimizing query 88300/100000
+  Optimizing query 88400/100000
+  Optimizing query 88500/100000
+  Optimizing query 88600/100000
+  Optimizing query 88700/100000
+  Optimizing query 88800/100000
+  Optimizing query 88900/100000
+  Optimizing query 89000/100000
+  Optimizing query 89100/100000
+  Optimizing query 89200/100000
+  Optimizing query 89300/100000
+  Optimizing query 89400/100000
+  Optimizing query 89500/100000
+  Optimizing query 89600/100000
+  Optimizing query 89700/100000
+  Optimizing query 89800/100000
+  Optimizing query 89900/100000
+  Optimizing query 90000/100000
+  Optimizing query 90100/100000
+  Optimizing query 90200/100000
+  Optimizing query 90300/100000
+  Optimizing query 90400/100000
+  Optimizing query 90500/100000
+  Optimizing query 90600/100000
+  Optimizing query 90700/100000
+  Optimizing query 90800/100000
+  Optimizing query 90900/100000
+  Optimizing query 91000/100000
+  Optimizing query 91100/100000
+  Optimizing query 91200/100000
+  Optimizing query 91300/100000
+  Optimizing query 91400/100000
+  Optimizing query 91500/100000
+  Optimizing query 91600/100000
+  Optimizing query 91700/100000
+  Optimizing query 91800/100000
+  Optimizing query 91900/100000
+  Optimizing query 92000/100000
+  Optimizing query 92100/100000
+  Optimizing query 92200/100000
+  Optimizing query 92300/100000
+  Optimizing query 92400/100000
+  Optimizing query 92500/100000
+  Optimizing query 92600/100000
+  Optimizing query 92700/100000
+  Optimizing query 92800/100000
+  Optimizing query 92900/100000
+  Optimizing query 93000/100000
+  Optimizing query 93100/100000
+  Optimizing query 93200/100000
+  Optimizing query 93300/100000
+  Optimizing query 93400/100000
+  Optimizing query 93500/100000
+  Optimizing query 93600/100000
+  Optimizing query 93700/100000
+  Optimizing query 93800/100000
+  Optimizing query 93900/100000
+  Optimizing query 94000/100000
+  Optimizing query 94100/100000
+  Optimizing query 94200/100000
+  Optimizing query 94300/100000
+  Optimizing query 94400/100000
+  Optimizing query 94500/100000
+  Optimizing query 94600/100000
+  Optimizing query 94700/100000
+  Optimizing query 94800/100000
+  Optimizing query 94900/100000
+  Optimizing query 95000/100000
+  Optimizing query 95100/100000
+  Optimizing query 95200/100000
+  Optimizing query 95300/100000
+  Optimizing query 95400/100000
+  Optimizing query 95500/100000
+  Optimizing query 95600/100000
+  Optimizing query 95700/100000
+  Optimizing query 95800/100000
+  Optimizing query 95900/100000
+  Optimizing query 96000/100000
+  Optimizing query 96100/100000
+  Optimizing query 96200/100000
+  Optimizing query 96300/100000
+  Optimizing query 96400/100000
+  Optimizing query 96500/100000
+  Optimizing query 96600/100000
+  Optimizing query 96700/100000
+  Optimizing query 96800/100000
+  Optimizing query 96900/100000
+  Optimizing query 97000/100000
+  Optimizing query 97100/100000
+  Optimizing query 97200/100000
+  Optimizing query 97300/100000
+  Optimizing query 97400/100000
+  Optimizing query 97500/100000
+  Optimizing query 97600/100000
+  Optimizing query 97700/100000
+  Optimizing query 97800/100000
+  Optimizing query 97900/100000
+  Optimizing query 98000/100000
+  Optimizing query 98100/100000
+  Optimizing query 98200/100000
+  Optimizing query 98300/100000
+  Optimizing query 98400/100000
+  Optimizing query 98500/100000
+  Optimizing query 98600/100000
+  Optimizing query 98700/100000
+  Optimizing query 98800/100000
+  Optimizing query 98900/100000
+  Optimizing query 99000/100000
+  Optimizing query 99100/100000
+  Optimizing query 99200/100000
+  Optimizing query 99300/100000
+  Optimizing query 99400/100000
+  Optimizing query 99500/100000
+  Optimizing query 99600/100000
+  Optimizing query 99700/100000
+  Optimizing query 99800/100000
+  Optimizing query 99900/100000
+Optimization completed in 522182 ms
+
+=== Testing at 1.00% (used 100000 queries) ===
+current number of elements: 10000000
+max number of elements: 10000000
+Average out-degree: 22.57
+Average Capacity: 24.37
+entry point: 7596402
+  Testing query 100/10000
+  Testing query 200/10000
+  Testing query 300/10000
+  Testing query 400/10000
+  Testing query 500/10000
+  Testing query 600/10000
+  Testing query 700/10000
+  Testing query 800/10000
+  Testing query 900/10000
+  Testing query 1000/10000
+  Testing query 1100/10000
+  Testing query 1200/10000
+  Testing query 1300/10000
+  Testing query 1400/10000
+  Testing query 1500/10000
+  Testing query 1600/10000
+  Testing query 1700/10000
+  Testing query 1800/10000
+  Testing query 1900/10000
+  Testing query 2000/10000
+  Testing query 2100/10000
+  Testing query 2200/10000
+  Testing query 2300/10000
+  Testing query 2400/10000
+  Testing query 2500/10000
+  Testing query 2600/10000
+  Testing query 2700/10000
+  Testing query 2800/10000
+  Testing query 2900/10000
+  Testing query 3000/10000
+  Testing query 3100/10000
+  Testing query 3200/10000
+  Testing query 3300/10000
+  Testing query 3400/10000
+  Testing query 3500/10000
+  Testing query 3600/10000
+  Testing query 3700/10000
+  Testing query 3800/10000
+  Testing query 3900/10000
+  Testing query 4000/10000
+  Testing query 4100/10000
+  Testing query 4200/10000
+  Testing query 4300/10000
+  Testing query 4400/10000
+  Testing query 4500/10000
+  Testing query 4600/10000
+  Testing query 4700/10000
+  Testing query 4800/10000
+  Testing query 4900/10000
+  Testing query 5000/10000
+  Testing query 5100/10000
+  Testing query 5200/10000
+  Testing query 5300/10000
+  Testing query 5400/10000
+  Testing query 5500/10000
+  Testing query 5600/10000
+  Testing query 5700/10000
+  Testing query 5800/10000
+  Testing query 5900/10000
+  Testing query 6000/10000
+  Testing query 6100/10000
+  Testing query 6200/10000
+  Testing query 6300/10000
+  Testing query 6400/10000
+  Testing query 6500/10000
+  Testing query 6600/10000
+  Testing query 6700/10000
+  Testing query 6800/10000
+  Testing query 6900/10000
+  Testing query 7000/10000
+  Testing query 7100/10000
+  Testing query 7200/10000
+  Testing query 7300/10000
+  Testing query 7400/10000
+  Testing query 7500/10000
+  Testing query 7600/10000
+  Testing query 7700/10000
+  Testing query 7800/10000
+  Testing query 7900/10000
+  Testing query 8000/10000
+  Testing query 8100/10000
+  Testing query 8200/10000
+  Testing query 8300/10000
+  Testing query 8400/10000
+  Testing query 8500/10000
+  Testing query 8600/10000
+  Testing query 8700/10000
+  Testing query 8800/10000
+  Testing query 8900/10000
+  Testing query 9000/10000
+  Testing query 9100/10000
+  Testing query 9200/10000
+  Testing query 9300/10000
+  Testing query 9400/10000
+  Testing query 9500/10000
+  Testing query 9600/10000
+  Testing query 9700/10000
+  Testing query 9800/10000
+  Testing query 9900/10000
+Results for 1.00%:
+  Avg Recall: 0.77
+  Avg Latency: 0.59 ms
+  Avg Accessed Nodes: 2015.92
+  Mean Out-Degree: 22.57
+
+
+=== Recalculating recall on current index (used 100000 queries) ===
+=== Recalculation: Calculating recall for all training queries ===
+  Processing training query 100000/10000000
+  Processing training query 200000/10000000
+  Processing training query 300000/10000000
+  Processing training query 400000/10000000
+  Processing training query 500000/10000000
+  Processing training query 600000/10000000
+  Processing training query 700000/10000000
+  Processing training query 800000/10000000
+  Processing training query 900000/10000000
+  Processing training query 1000000/10000000
+  Processing training query 1100000/10000000
+  Processing training query 1200000/10000000
+  Processing training query 1300000/10000000
+  Processing training query 1400000/10000000
+  Processing training query 1500000/10000000
+  Processing training query 1600000/10000000
+  Processing training query 1700000/10000000
+  Processing training query 1800000/10000000
+  Processing training query 1900000/10000000
+  Processing training query 2000000/10000000
+  Processing training query 2100000/10000000
+  Processing training query 2200000/10000000
+  Processing training query 2300000/10000000
+  Processing training query 2400000/10000000
+  Processing training query 2500000/10000000
+  Processing training query 2600000/10000000
+  Processing training query 2700000/10000000
+  Processing training query 2800000/10000000
+  Processing training query 2900000/10000000
+  Processing training query 3000000/10000000
+  Processing training query 3100000/10000000
+  Processing training query 3200000/10000000
+  Processing training query 3300000/10000000
+  Processing training query 3400000/10000000
+  Processing training query 3500000/10000000
+  Processing training query 3600000/10000000
+  Processing training query 3700000/10000000
+  Processing training query 3800000/10000000
+  Processing training query 3900000/10000000
+  Processing training query 4000000/10000000
+  Processing training query 4100000/10000000
+  Processing training query 4200000/10000000
+  Processing training query 4300000/10000000
+  Processing training query 4400000/10000000
+  Processing training query 4500000/10000000
+  Processing training query 4600000/10000000
+  Processing training query 4700000/10000000
+  Processing training query 4800000/10000000
+  Processing training query 4900000/10000000
+  Processing training query 5000000/10000000
+  Processing training query 5100000/10000000
+  Processing training query 5200000/10000000
+  Processing training query 5300000/10000000
+  Processing training query 5400000/10000000
+  Processing training query 5500000/10000000
+  Processing training query 5600000/10000000
+  Processing training query 5700000/10000000
+  Processing training query 5800000/10000000
+  Processing training query 5900000/10000000
+Killed
+
+Done! Results saved to /workspace/OOD-ANNS/NGFix/data/t2i-10M/selective_optimization_results/ngfix_selective_optimization_results.csv

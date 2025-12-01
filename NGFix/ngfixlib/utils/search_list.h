@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <memory>
 #include <xmmintrin.h>
+#include <limits>
 
 namespace ngfixlib {
 
@@ -20,6 +21,9 @@ public:
     virtual void set_visited(id_t) = 0;
     virtual void prefetch_visited_list(id_t) = 0;
     virtual void releaseVisitedList() = 0;
+    virtual std::vector<id_t> get_frontier_snapshot() { return std::vector<id_t>(); }
+    virtual float get_best_candidate_dist() { return std::numeric_limits<float>::max(); }
+    virtual float get_worst_topk_dist(size_t k) { return std::numeric_limits<float>::max(); }
 };
 
 class Search_PriorityQueue : public SearchList
@@ -111,6 +115,31 @@ public:
     virtual void releaseVisitedList() {
         visited_list_pool->releaseVisitedList(vl);
     };
+    
+    virtual float get_best_candidate_dist() {
+        if(candidate_set.empty()) {
+            return std::numeric_limits<float>::max();
+        }
+        return candidate_set.top().first; // Already positive in PriorityQueue
+    }
+    
+    virtual float get_worst_topk_dist(size_t k) {
+        if(top_candidates.size() < k) {
+            return std::numeric_limits<float>::max();
+        }
+        // PriorityQueue stores distances as positive, top() gives worst
+        auto temp_queue = top_candidates;
+        std::vector<float> distances;
+        while(temp_queue.size() > 0 && distances.size() < k) {
+            distances.push_back(temp_queue.top().first);
+            temp_queue.pop();
+        }
+        if(distances.size() >= k) {
+            std::sort(distances.begin(), distances.end());
+            return distances[k - 1];
+        }
+        return std::numeric_limits<float>::max();
+    }
 };
 
 
@@ -260,6 +289,22 @@ public:
     virtual void releaseVisitedList() {
         visited_list_pool->releaseVisitedList(vl);
     };
+    
+    virtual float get_best_candidate_dist() {
+        // Search_Array doesn't maintain a separate candidate set
+        // Return the next unchecked candidate distance
+        if(L_start_idx < L_size) {
+            return L_set[L_start_idx].dist;
+        }
+        return std::numeric_limits<float>::max();
+    }
+    
+    virtual float get_worst_topk_dist(size_t k) {
+        if(L_size < k) {
+            return std::numeric_limits<float>::max();
+        }
+        return L_set[k - 1].dist;
+    }
 };
 
 
@@ -409,13 +454,43 @@ public:
     }
 
     // Get current frontier set as snapshot (set of node IDs in top_candidates)
-    std::vector<id_t> get_frontier_snapshot() {
+    virtual std::vector<id_t> get_frontier_snapshot() {
         std::vector<id_t> frontier;
         auto elements = top_candidates.get_all_elements();
         for(const auto& elem : elements) {
             frontier.push_back(elem.second);
         }
         return frontier;
+    }
+    
+    // Get best candidate distance (smallest in candidate_set)
+    virtual float get_best_candidate_dist() {
+        if(candidate_set.empty()) {
+            return std::numeric_limits<float>::max();
+        }
+        auto best_cand = candidate_set.top();
+        return -best_cand.first; // Negate because candidate_set stores -dist
+    }
+    
+    // Get worst distance in top-k
+    virtual float get_worst_topk_dist(size_t k) {
+        if(top_candidates.size() < k) {
+            return std::numeric_limits<float>::max();
+        }
+        auto elements = top_candidates.get_all_elements();
+        if(elements.size() < k) {
+            return std::numeric_limits<float>::max();
+        }
+        std::vector<float> distances;
+        distances.reserve(elements.size());
+        for(const auto& elem : elements) {
+            distances.push_back(elem.first);
+        }
+        std::sort(distances.begin(), distances.end());
+        if(distances.size() >= k) {
+            return distances[k - 1];
+        }
+        return std::numeric_limits<float>::max();
     }
 
     virtual std::vector<std::pair<float, id_t> > get_result(size_t k) {

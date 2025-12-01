@@ -28,15 +28,18 @@ struct QueryHardnessMetrics {
     // New metrics
     float top_k_margin;           // Top-k Margin (MG)
     float top_k_cohesion;         // Top-k Cohesion (LCS, sampled)
-    float hubness_mean;           // Result Hubness - mean
-    float hubness_var;            // Result Hubness - variance
-    float distance_slope;        // Distance Slope
-    float distance_gini;         // Gini coefficient of distances
     float signature_dissimilarity; // Set-Signature Dissimilarity
     
     // Additional metrics
     float jitter;                 // Micro-Perturbation Stability (Jitter J)
     float reachability_probe;     // τ-Reachability Probe on Visited Subgraph
+    
+    // Lightweight metrics from single search trace
+    size_t S;                     // Total number of visited nodes (equals ndc)
+    float r_visit;                // Visit Budget Usage: S / ef
+    float r_early;                // Early-Convergence Ratio: t_last_improve / S
+    float top1_last1_diff;        // Distance difference: last1_dist - top1_dist (in top-k results)
+    float delta_improve;          // Early-vs-Final Improvement Ratio
 };
 
 // Calculate Escape Hardness for a query
@@ -583,7 +586,6 @@ int main(int argc, char* argv[]) {
     size_t ef_2x = 200;        // 2x increase (double)
     
     // Initialize trackers for new metrics
-    HubnessTracker hubness_tracker;
     SignatureCache signature_cache(10);
     
     for(size_t i = 0; i < actual_num_queries; ++i) {
@@ -594,11 +596,16 @@ int main(int argc, char* argv[]) {
         auto query_data = test_query + i * vecdim;
         auto gt = test_gt + i * test_gt_dim;
         
-        // Search with metrics (includes frontier churn)
+        // Search with lightweight metrics
         // Search for k+1 results to calculate top-k margin
         size_t ndc = 0;
-        auto [results, ndc_result, frontier_churn] = hnsw_base->searchKnnWithMetrics(
-            query_data, k + 1, ef_base, ndc);
+        auto [results, ndc_result, lw_metrics] = hnsw_base->searchKnnWithLightweightMetrics(
+            query_data, k + 1, ef_base, ndc, 0.2f);
+        
+        // Also get frontier churn using the old method
+        size_t ndc2 = 0;
+        auto [results2, ndc_result2, frontier_churn] = hnsw_base->searchKnnWithMetrics(
+            query_data, k + 1, ef_base, ndc2);
         
         // Truncate to k for other calculations
         std::vector<std::pair<float, id_t> > results_k(results.begin(), results.begin() + std::min(k, results.size()));
@@ -627,18 +634,11 @@ int main(int argc, char* argv[]) {
         // 2. Calculate Top-k Cohesion (use results_k)
         float top_k_cohesion = CalculateTopKCohesion(hnsw_base, results_k, k, 16);
         
-        // 3. Update hubness tracker and get stats (use results_k)
-        for(const auto& p : results_k) {
-            hubness_tracker.record_hit(p.second);
-        }
-        auto [hubness_mean, hubness_var] = hubness_tracker.get_stats(results_k, k);
-        
-        // 4. Calculate Distance Slope and Gini (use results_k)
-        auto [distance_slope, distance_gini] = CalculateDistanceStats(results_k, k);
-        
-        // 5. Calculate Set-Signature Dissimilarity (use results_k)
+        // 3. Calculate Set-Signature Dissimilarity (use results_k)
         uint64_t signature = signature_cache.compute_signature(results_k, k);
         float signature_dissimilarity = signature_cache.get_dissimilarity(signature);
+        
+        // Lightweight metrics are already calculated in lw_metrics
         
         metrics[i] = {
             recall,
@@ -649,13 +649,14 @@ int main(int argc, char* argv[]) {
             ndc_result,
             top_k_margin,
             top_k_cohesion,
-            hubness_mean,
-            hubness_var,
-            distance_slope,
-            distance_gini,
             signature_dissimilarity,
             jitter,
-            reachability_probe
+            reachability_probe,
+            lw_metrics.S,
+            lw_metrics.r_visit,
+            lw_metrics.r_early,
+            lw_metrics.top1_last1_diff,
+            lw_metrics.delta_improve
         };
     }
     
@@ -664,10 +665,9 @@ int main(int argc, char* argv[]) {
     float avg_self_consistency_2x = 0;
     float avg_ndc = 0;
     float avg_top_k_margin = 0, avg_top_k_cohesion = 0;
-    float avg_hubness_mean = 0, avg_hubness_var = 0;
-    float avg_distance_slope = 0, avg_distance_gini = 0;
     float avg_signature_dissimilarity = 0;
     float avg_jitter = 0, avg_reachability_probe = 0;
+    float avg_r_visit = 0, avg_r_early = 0, avg_top1_last1_diff = 0, avg_delta_improve = 0;
     
     for(const auto& m : metrics) {
         avg_recall += m.recall;
@@ -678,13 +678,13 @@ int main(int argc, char* argv[]) {
         avg_ndc += m.ndc;
         avg_top_k_margin += m.top_k_margin;
         avg_top_k_cohesion += m.top_k_cohesion;
-        avg_hubness_mean += m.hubness_mean;
-        avg_hubness_var += m.hubness_var;
-        avg_distance_slope += m.distance_slope;
-        avg_distance_gini += m.distance_gini;
         avg_signature_dissimilarity += m.signature_dissimilarity;
         avg_jitter += m.jitter;
         avg_reachability_probe += m.reachability_probe;
+        avg_r_visit += m.r_visit;
+        avg_r_early += m.r_early;
+        avg_top1_last1_diff += m.top1_last1_diff;
+        avg_delta_improve += m.delta_improve;
     }
     
     avg_recall /= actual_num_queries;
@@ -695,13 +695,13 @@ int main(int argc, char* argv[]) {
     avg_ndc /= actual_num_queries;
     avg_top_k_margin /= actual_num_queries;
     avg_top_k_cohesion /= actual_num_queries;
-    avg_hubness_mean /= actual_num_queries;
-    avg_hubness_var /= actual_num_queries;
-    avg_distance_slope /= actual_num_queries;
-    avg_distance_gini /= actual_num_queries;
     avg_signature_dissimilarity /= actual_num_queries;
     avg_jitter /= actual_num_queries;
     avg_reachability_probe /= actual_num_queries;
+    avg_r_visit /= actual_num_queries;
+    avg_r_early /= actual_num_queries;
+    avg_top1_last1_diff /= actual_num_queries;
+    avg_delta_improve /= actual_num_queries;
     
     // Calculate P90 for frontier churn
     std::vector<float> fc_values;
@@ -735,13 +735,13 @@ int main(int argc, char* argv[]) {
         output << "      \"ndc\": " << metrics[i].ndc << ",\n";
         output << "      \"top_k_margin\": " << metrics[i].top_k_margin << ",\n";
         output << "      \"top_k_cohesion\": " << metrics[i].top_k_cohesion << ",\n";
-        output << "      \"hubness_mean\": " << metrics[i].hubness_mean << ",\n";
-        output << "      \"hubness_var\": " << metrics[i].hubness_var << ",\n";
-        output << "      \"distance_slope\": " << metrics[i].distance_slope << ",\n";
-        output << "      \"distance_gini\": " << metrics[i].distance_gini << ",\n";
         output << "      \"signature_dissimilarity\": " << metrics[i].signature_dissimilarity << ",\n";
         output << "      \"jitter\": " << metrics[i].jitter << ",\n";
-        output << "      \"reachability_probe\": " << metrics[i].reachability_probe << "\n";
+        output << "      \"reachability_probe\": " << metrics[i].reachability_probe << ",\n";
+        output << "      \"r_visit\": " << metrics[i].r_visit << ",\n";
+        output << "      \"r_early\": " << metrics[i].r_early << ",\n";
+        output << "      \"top1_last1_diff\": " << metrics[i].top1_last1_diff << ",\n";
+        output << "      \"delta_improve\": " << metrics[i].delta_improve << "\n";
         output << "    }";
         if(i < actual_num_queries - 1) {
             output << ",";
@@ -760,14 +760,14 @@ int main(int argc, char* argv[]) {
         output << "    \"avg_ndc\": " << avg_ndc << ",\n";
     output << "    \"avg_top_k_margin\": " << avg_top_k_margin << ",\n";
     output << "    \"avg_top_k_cohesion\": " << avg_top_k_cohesion << ",\n";
-    output << "    \"avg_hubness_mean\": " << avg_hubness_mean << ",\n";
-    output << "    \"avg_hubness_var\": " << avg_hubness_var << ",\n";
-    output << "    \"avg_distance_slope\": " << avg_distance_slope << ",\n";
-        output << "    \"avg_distance_gini\": " << avg_distance_gini << ",\n";
-        output << "    \"avg_signature_dissimilarity\": " << avg_signature_dissimilarity << ",\n";
-        output << "    \"avg_jitter\": " << avg_jitter << ",\n";
-        output << "    \"avg_reachability_probe\": " << avg_reachability_probe << "\n";
-        output << "  }\n";
+    output << "    \"avg_signature_dissimilarity\": " << avg_signature_dissimilarity << ",\n";
+    output << "    \"avg_jitter\": " << avg_jitter << ",\n";
+    output << "    \"avg_reachability_probe\": " << avg_reachability_probe << ",\n";
+    output << "    \"avg_r_visit\": " << avg_r_visit << ",\n";
+    output << "    \"avg_r_early\": " << avg_r_early << ",\n";
+    output << "    \"avg_top1_last1_diff\": " << avg_top1_last1_diff << ",\n";
+    output << "    \"avg_delta_improve\": " << avg_delta_improve << "\n";
+    output << "  }\n";
     output << "}\n";
     output.close();
     
@@ -780,13 +780,13 @@ int main(int argc, char* argv[]) {
     std::cout << "Average Self-Consistency (2x): " << avg_self_consistency_2x << std::endl;
     std::cout << "Average Top-k Margin: " << avg_top_k_margin << std::endl;
     std::cout << "Average Top-k Cohesion: " << avg_top_k_cohesion << std::endl;
-    std::cout << "Average Hubness Mean: " << avg_hubness_mean << std::endl;
-    std::cout << "Average Hubness Var: " << avg_hubness_var << std::endl;
-    std::cout << "Average Distance Slope: " << avg_distance_slope << std::endl;
-    std::cout << "Average Distance Gini: " << avg_distance_gini << std::endl;
     std::cout << "Average Signature Dissimilarity: " << avg_signature_dissimilarity << std::endl;
     std::cout << "Average Jitter: " << avg_jitter << std::endl;
     std::cout << "Average Reachability Probe: " << avg_reachability_probe << std::endl;
+    std::cout << "Average r_visit: " << avg_r_visit << std::endl;
+    std::cout << "Average r_early: " << avg_r_early << std::endl;
+    std::cout << "Average top1_last1_diff: " << avg_top1_last1_diff << std::endl;
+    std::cout << "Average delta_improve: " << avg_delta_improve << std::endl;
     
     delete[] test_query;
     delete[] test_gt;
