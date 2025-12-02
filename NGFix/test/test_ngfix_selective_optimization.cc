@@ -282,20 +282,20 @@ int main(int argc, char* argv[]) {
     size_t current_total_used = 0;
     size_t target_idx = 0;
     
-    const double step_percentage = 1.0;  // Use 1% at a time
+    const double step_percentage = 2.0;  // Use 2% at a time
     size_t step_size = (size_t)(train_number * step_percentage / 100.0);
     double max_percentage = target_percentages.back();  // 30%
     size_t max_count = (size_t)(train_number * max_percentage / 100.0);
     
     // Open CSV file for all results
-    std::string all_results_csv_path = result_dir + "/ngfix_all_results_1percent_intervals.csv";
+    std::string all_results_csv_path = result_dir + "/ngfix_all_results_2percent_intervals.csv";
     std::ofstream all_results_csv(all_results_csv_path);
     all_results_csv << std::fixed << std::setprecision(4);
     all_results_csv << "Percentage,Recall,Latency_ms,Accessed_Nodes,Mean_Out_Degree\n";
     
     std::cout << "=== Step 3: Iterative Optimization Process ===" << std::endl;
     std::cout << "Will optimize in steps of " << step_percentage << "% (" << step_size << " queries per step)" << std::endl;
-    std::cout << "Will test after each 1% completion" << std::endl;
+    std::cout << "Will test after each " << step_percentage << "% completion" << std::endl;
     std::cout << "Target percentages for summary: ";
     for(double pct : target_percentages) {
         std::cout << pct << "% ";
@@ -309,7 +309,7 @@ int main(int argc, char* argv[]) {
         std::cout << "\n=== Recalculating recall on current index (used " << current_total_used << " queries) ===" << std::endl;
         train_recalls = CalculateAndSortTrainRecalls(working_index, "Recalculation");
         
-        // Select next 1% of queries that haven't been used yet
+        // Select next 2% of queries that haven't been used yet
         size_t queries_to_add = std::min(step_size, max_count - current_total_used);
         std::vector<size_t> selected_indices;
         
@@ -355,7 +355,7 @@ int main(int argc, char* argv[]) {
         current_total_used = used_query_indices.size();
         double current_percentage = (double)current_total_used / train_number * 100.0;
         
-        // Test after each 1% completion
+        // Test after each 2% completion
         std::cout << "\n=== Testing at " << std::fixed << std::setprecision(2) << current_percentage 
                   << "% (used " << current_total_used << " queries) ===" << std::endl;
         working_index->printGraphInfo();
@@ -382,20 +382,19 @@ int main(int argc, char* argv[]) {
         std::cout << "  Mean Out-Degree: " << metrics.mean_out_degree << std::endl;
         std::cout << std::endl;
         
+        // Save index after each test (every 2%)
+        std::stringstream index_path;
+        index_path << result_dir << "/index_" << std::fixed << std::setprecision(1) << current_percentage << "pct.index";
+        working_index->StoreIndex(index_path.str());
+        std::cout << "Index saved to: " << index_path.str() << std::endl;
+        std::cout << std::endl;
+        
         // Check if we've reached a target percentage for summary
         if(target_idx < target_percentages.size()) {
             double target_pct = target_percentages[target_idx];
             if(current_percentage >= target_pct) {
                 percentage_metrics.push_back(metrics);
                 percentage_labels.push_back(std::to_string((int)target_pct) + "%");
-                
-                // Save optimized index at this checkpoint
-                std::stringstream temp_index_path;
-                temp_index_path << result_dir << "/temp_index_" << (int)target_pct << "pct.index";
-                working_index->StoreIndex(temp_index_path.str());
-                std::cout << "Checkpoint: Index saved to: " << temp_index_path.str() << std::endl;
-                std::cout << std::endl;
-                
                 target_idx++;
             }
         }
@@ -404,7 +403,7 @@ int main(int argc, char* argv[]) {
     all_results_csv.close();
     delete working_index;
     
-    std::cout << "\n=== All 1% interval results saved to: " << all_results_csv_path << " ===" << std::endl;
+    std::cout << "\n=== All " << step_percentage << "% interval results saved to: " << all_results_csv_path << " ===" << std::endl;
     std::cout << "Total data points: " << all_results.size() << std::endl;
     std::cout << std::endl;
     
