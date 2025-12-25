@@ -387,7 +387,47 @@ public:
             delete_ids.clear();
         }
 
-        // delete correspoding edges
+        // Step 1: Collect neighbors for each deleted node BEFORE deletion
+        // Map: deleted_node_id -> set of neighbor nodes (both incoming and outgoing)
+        std::unordered_map<id_t, std::unordered_set<id_t> > deleted_node_neighbors;
+        
+        // First, collect outgoing neighbors for each deleted node
+        for(auto deleted_id : ids) {
+            if(deleted_id >= n) continue;
+            deleted_node_neighbors[deleted_id] = std::unordered_set<id_t>();
+            
+            // Get outgoing neighbors (nodes that deleted_id points to)
+            auto [outs, sz, st] = getNeighbors(deleted_id);
+            for(int j = st; j < st + sz; ++j) {
+                id_t neighbor_id = outs[j];
+                if(neighbor_id < n && ids.find(neighbor_id) == ids.end()) {
+                    deleted_node_neighbors[deleted_id].insert(neighbor_id);
+                }
+            }
+        }
+        
+        // Then, collect incoming neighbors (nodes that point to deleted nodes)
+        // Scan all nodes once to find incoming edges
+        #pragma omp parallel for schedule(dynamic) num_threads(Threads)
+        for(int i = 0; i < n; ++i) {
+            if(ids.find(i) != ids.end()) continue; // Skip deleted nodes
+            
+            auto [i_outs, i_sz, i_st] = getNeighbors(i);
+            for(int j = i_st; j < i_st + i_sz; ++j) {
+                id_t neighbor_id = i_outs[j];
+                if(neighbor_id < n && ids.find(neighbor_id) != ids.end()) {
+                    // i points to a deleted node, so i is an incoming neighbor
+                    #pragma omp critical
+                    {
+                        if(deleted_node_neighbors.find(neighbor_id) != deleted_node_neighbors.end()) {
+                            deleted_node_neighbors[neighbor_id].insert(i);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Step 2: Delete corresponding edges
         #pragma omp parallel for schedule(dynamic) num_threads(Threads)
         for(int i = 0; i < n; ++i) {
             if(ids.find(i) != ids.end()) {
@@ -418,6 +458,7 @@ public:
             }
         }
 
+        // Step 3: Use collected neighbors as GT for NGFix repair
         std::vector<id_t> v_ids;
         for(auto u : ids) {
             v_ids.push_back(u);
@@ -428,10 +469,84 @@ public:
             if(i % 100000 == 0) {
                 std::cout<<"delete number "<<i<<"\n";
             }
-            int* gt = new int[500];
-            AKNNGroundTruth(getData(v_ids[i]), gt, 500, efC_delete);
-            NGFix(getData(v_ids[i]), gt, 100, 100);
-            delete []gt; 
+            
+            id_t deleted_id = v_ids[i];
+            auto& neighbors = deleted_node_neighbors[deleted_id];
+            
+            if(neighbors.empty()) {
+                continue; // No neighbors to repair
+            }
+            
+            // Sort neighbors by distance to deleted node (use nearest neighbors first)
+            std::vector<std::pair<float, id_t> > neighbor_distances;
+            T* deleted_data = getData(deleted_id);
+            for(auto neighbor_id : neighbors) {
+                if(neighbor_id < n && !is_deleted(neighbor_id)) {
+                    float dist = getDist(deleted_id, neighbor_id);
+                    neighbor_distances.push_back({dist, neighbor_id});
+                }
+            }
+            std::sort(neighbor_distances.begin(), neighbor_distances.end());
+            
+            // IMPROVED REPAIR STRATEGY: More aggressive repair to improve recall
+            // Balance between connectivity and performance
+            // Always attempt repair if we have neighbors (even if < 10)
+            if(neighbor_distances.size() > 0) {
+                // Use larger GT size to improve connectivity
+                // Increased from 30 to 60-80 to allow better repair
+                size_t max_gt_size = 80;  // Increased from 30
+                if(neighbor_distances.size() < 30) {
+                    max_gt_size = std::min(neighbor_distances.size(), (size_t)50);
+                } else if(neighbor_distances.size() < 50) {
+                    max_gt_size = 60;
+                }
+                size_t gt_size = std::min(neighbor_distances.size(), max_gt_size);
+                int* gt = new int[gt_size];
+                for(size_t idx = 0; idx < gt_size; ++idx) {
+                    gt[idx] = neighbor_distances[idx].second;
+                }
+                
+                // Use more aggressive Nq and Kh to improve connectivity
+                // Increased from 8-20 to 20-50
+                size_t Nq, Kh;
+                if(gt_size <= 10) {
+                    // Very small neighbor set: use all available
+                    Nq = gt_size;
+                    Kh = gt_size;
+                } else if(gt_size <= 20) {
+                    // Small neighbor set: use most of them
+                    Nq = std::min(gt_size, (size_t)15);
+                    Kh = std::min(gt_size, (size_t)15);
+                } else if(gt_size <= 40) {
+                    // Medium neighbor set: moderate repair
+                    Nq = std::min(gt_size, (size_t)30);
+                    Kh = std::min(gt_size, (size_t)30);
+                } else {
+                    // Larger neighbor set: more aggressive repair
+                    Nq = std::min(gt_size, (size_t)50);
+                    Kh = std::min(gt_size, (size_t)50);
+                }
+                
+                // Perform NGFix repair with improved parameters
+                // Use two rounds of NGFix for better connectivity (similar to build process)
+                NGFix(deleted_data, gt, Nq, Kh);
+                if(gt_size >= 10) {
+                    // Second round with smaller parameters for fine-tuning
+                    size_t Nq2 = std::min(gt_size, (size_t)10);
+                    size_t Kh2 = std::min(gt_size, (size_t)10);
+                    NGFix(deleted_data, gt, Nq2, Kh2);
+                }
+                
+                // Add RFix for better connectivity (especially for hard-to-reach regions)
+                // RFix helps when search cannot reach the query vicinity
+                // Use smaller Nq for RFix to avoid excessive edge additions
+                if(gt_size >= 5) {
+                    size_t rf_Nq = std::min(gt_size, (size_t)10);
+                    RFix(deleted_data, gt, rf_Nq, efC_delete);
+                }
+                
+                delete []gt;
+            } 
         }
     }
 
@@ -708,11 +823,24 @@ public:
 
         id_t ep = 0;
         float min_dis = std::numeric_limits<float>::max();
+        bool found_valid_ep = false;
         for(int i = 0; i < n; ++i) {
+            if(is_deleted(i)) {continue;}  // Skip deleted nodes
             auto dis = space->dist_func(centroid, getData(i));
             if(dis < min_dis) {
                 min_dis = dis;
                 ep = i;
+                found_valid_ep = true;
+            }
+        }
+        // If no valid entry point found (all nodes deleted), find first non-deleted node
+        if(!found_valid_ep) {
+            for(int i = 0; i < n; ++i) {
+                if(!is_deleted(i)) {
+                    ep = i;
+                    found_valid_ep = true;
+                    break;
+                }
             }
         }
         entry_point = ep;
@@ -729,10 +857,21 @@ public:
         Search_QuadHeap q0(ef, visited_list_pool_);
         auto q = &q0;
 
-        // Ensure entry_point is within bounds
-        if(entry_point >= max_elements || entry_point >= node_locks.size()) {
-            // Return empty result if entry_point is invalid
+        // Ensure entry_point is within bounds and not deleted
+        if(entry_point >= max_elements || entry_point >= node_locks.size() || is_deleted(entry_point)) {
+            // If entry point is invalid or deleted, find a new one
+            bool found_valid_ep = false;
+            for(int i = 0; i < n; ++i) {
+                if(i < max_elements && i < node_locks.size() && !is_deleted(i)) {
+                    entry_point = i;
+                    found_valid_ep = true;
+                    break;
+                }
+            }
+            if(!found_valid_ep) {
+                // No valid entry point found, return empty result
             return std::vector<std::pair<float, id_t>>();
+            }
         }
 
         float dist = getDist(entry_point, query_data);
@@ -784,6 +923,12 @@ public:
     }
 
     std::vector<std::pair<float, id_t> > searchKnn(T* query_data, size_t k, size_t ef, size_t& ndc) {
+        size_t dummy_max_size = 0;
+        return searchKnnWithMetrics(query_data, k, ef, ndc, dummy_max_size);
+    }
+    
+    // Enhanced version that also returns max_candidate_set_size
+    std::vector<std::pair<float, id_t> > searchKnnWithMetrics(T* query_data, size_t k, size_t ef, size_t& ndc, size_t& max_candidate_set_size) {
         size_t hop_limit = std::numeric_limits<int>::max();
         size_t hop = 0;
         if(ef < k) {
@@ -799,6 +944,7 @@ public:
         // Ensure entry_point is within bounds
         if(entry_point >= max_elements || entry_point >= node_locks.size()) {
             // Return empty result if entry_point is invalid
+            max_candidate_set_size = 0;
             return std::vector<std::pair<float, id_t>>();
         }
         
@@ -845,6 +991,7 @@ public:
                 }
             }
         }
+        max_candidate_set_size = q->get_max_candidate_set_size();
         q->releaseVisitedList();
         auto res = q->get_result(k);
         return res;

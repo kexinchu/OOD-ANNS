@@ -1,0 +1,6 @@
+{
+  "num_trees": 200,
+  "max_depth": 15,
+  "n_features": 17,
+  "n_samples": 100000
+}

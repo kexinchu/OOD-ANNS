@@ -1,0 +1,3 @@
+timestamp,query_count,avg_recall,avg_ndc,avg_latency_ms,total_searches,total_inserts,successful_inserts,failed_inserts,total_deletes,successful_deletes,failed_deletes,index_size
+2025-12-20 19:07:20,141,0.987092,17365.8,5.92206,8518,1120,1116,4,119,119,0,10001003
+2025-12-20 19:08:20,138,0.990362,16859.2,5.84401,16922,2237,2228,9,238,238,0,10002003

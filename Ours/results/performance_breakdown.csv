@@ -1,0 +1,11 @@
+Component,Mean_us,P50_us,P95_us,P99_us,Percentage
+CalculateHardnessGrouped,179.3370,171.0000,193.0000,380.0000,24.7940
+Bitset_Preparation,19.1090,19.0000,21.0000,22.0000,2.6419
+getDefectsFixingEdges,261.0610,263.0000,341.0000,436.0000,36.0926
+Add_Edges,25.2650,20.0000,45.0000,55.0000,3.4930
+Other_Overhead,238.5370,234.0000,256.0000,264.0000,32.9786
+TOTAL,723.3090,707.0000,903.0000,1072.0000,100.00
+
+# Breakdown Analysis (not included in total)
+ComputeGq_original,150.7980,147.0000,163.0000,171.0000,N/A
+GroupNodesByReachability,84.8580,85.0000,93.0000,97.0000,N/A

@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "num_trees": 10,
+      "train_latency_ms": 809696.000000,
+      "test_mse": 0.019977,
+      "test_latency_ms_per_query": 0.925000
+    },
+    {
+      "num_trees": 25,
+      "train_latency_ms": 2020457.000000,
+      "test_mse": 0.019960,
+      "test_latency_ms_per_query": 0.739000
+    },
+    {
+      "num_trees": 50,
+      "train_latency_ms": 3954723.000000,
+      "test_mse": 0.019952,
+      "test_latency_ms_per_query": 0.735000
+    },
+    {
+      "num_trees": 75,
+      "train_latency_ms": 5846288.000000,
+      "test_mse": 0.019952,
+      "test_latency_ms_per_query": 0.761000
+    },
+    {
+      "num_trees": 100,
+      "train_latency_ms": 7668182.000000,
+      "test_mse": 0.019953,
+      "test_latency_ms_per_query": 0.743000
+    }
+  ]
+}

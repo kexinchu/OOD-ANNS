@@ -136,12 +136,17 @@ public:
     }
 
     IPSpace_float(size_t _dimension_) : Space<float>(_dimension_) {
-        if(dim%16 == 0) {
+        // Use _dimension_ parameter directly (already validated), dim member may not be initialized yet
+        if(_dimension_ == 0) {
+            throw std::runtime_error("Error: dimension is 0 in IPSpace_float constructor.");
+        }
+        if(_dimension_%16 == 0) {
             fp = &IPSpace_float::ipDistanceSIMD16ExtAVX512;
-        } else if(dim%4 == 0) {
+        } else if(_dimension_%4 == 0) {
             fp = &IPSpace_float::ipDistanceSIMD4ExtAVX512;
         } else {
-            throw std::runtime_error("dim % 4 shoule be 0.");
+            std::string error_msg = "dim % 4 should be 0, but got dim=" + std::to_string(_dimension_) + ", dim%4=" + std::to_string(_dimension_%4);
+            throw std::runtime_error(error_msg);
         }
     }
 };

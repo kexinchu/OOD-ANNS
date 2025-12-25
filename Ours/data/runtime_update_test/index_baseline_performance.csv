@@ -1,0 +1,2 @@
+index_path,query_path,gt_path,k,ef_search,num_queries,avg_recall,avg_latency_ms,avg_ndc,total_time_ms,throughput_qps
+/workspace/OOD-ANNS/Ours/data/comparison_10M/partial_rebuild.index,/workspace/OOD-ANNS/Ours/data/comparison_10M/query.test.8M.fbin,/workspace/OOD-ANNS/Ours/data/comparison_10M/train.gt.8M.bin,100,1000,60000,0.989289,4.2182,16761.06,254154,236.08

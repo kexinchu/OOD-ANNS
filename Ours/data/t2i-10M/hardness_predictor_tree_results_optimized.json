@@ -1,0 +1,6009 @@
+{
+  "num_queries": 1000,
+  "k": 100,
+  "num_trees": 100,
+  "best_feature_combination": ["r_visit", "r_early", "d_worst_final", "d_best_cand_final", "progress_rate", "firstNN", "furthestNN", "avg", "var"],
+  "best_mse": 0.024506,
+  "queries": [
+    {
+      "query_id": 0,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.077308
+    },
+    {
+      "query_id": 1,
+      "recall": 0.290000,
+      "hardness": 0.710000,
+      "predicted_hardness": 0.572361
+    },
+    {
+      "query_id": 2,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.133068
+    },
+    {
+      "query_id": 3,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.037221
+    },
+    {
+      "query_id": 4,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.584470
+    },
+    {
+      "query_id": 5,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.119818
+    },
+    {
+      "query_id": 6,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.093995
+    },
+    {
+      "query_id": 7,
+      "recall": 0.510000,
+      "hardness": 0.490000,
+      "predicted_hardness": 0.286830
+    },
+    {
+      "query_id": 8,
+      "recall": 0.470000,
+      "hardness": 0.530000,
+      "predicted_hardness": 0.411907
+    },
+    {
+      "query_id": 9,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.386826
+    },
+    {
+      "query_id": 10,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.166270
+    },
+    {
+      "query_id": 11,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.141408
+    },
+    {
+      "query_id": 12,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.663809
+    },
+    {
+      "query_id": 13,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.096083
+    },
+    {
+      "query_id": 14,
+      "recall": 0.470000,
+      "hardness": 0.530000,
+      "predicted_hardness": 0.425482
+    },
+    {
+      "query_id": 15,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.215727
+    },
+    {
+      "query_id": 16,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.101427
+    },
+    {
+      "query_id": 17,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.145447
+    },
+    {
+      "query_id": 18,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.348854
+    },
+    {
+      "query_id": 19,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.047064
+    },
+    {
+      "query_id": 20,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.186966
+    },
+    {
+      "query_id": 21,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.269663
+    },
+    {
+      "query_id": 22,
+      "recall": 0.650000,
+      "hardness": 0.350000,
+      "predicted_hardness": 0.316547
+    },
+    {
+      "query_id": 23,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.177810
+    },
+    {
+      "query_id": 24,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.330801
+    },
+    {
+      "query_id": 25,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.034030
+    },
+    {
+      "query_id": 26,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.102867
+    },
+    {
+      "query_id": 27,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.145723
+    },
+    {
+      "query_id": 28,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.180063
+    },
+    {
+      "query_id": 29,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.305546
+    },
+    {
+      "query_id": 30,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.173555
+    },
+    {
+      "query_id": 31,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.344399
+    },
+    {
+      "query_id": 32,
+      "recall": 0.670000,
+      "hardness": 0.330000,
+      "predicted_hardness": 0.297701
+    },
+    {
+      "query_id": 33,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.433725
+    },
+    {
+      "query_id": 34,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.264697
+    },
+    {
+      "query_id": 35,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.344487
+    },
+    {
+      "query_id": 36,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.385589
+    },
+    {
+      "query_id": 37,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.530712
+    },
+    {
+      "query_id": 38,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.053721
+    },
+    {
+      "query_id": 39,
+      "recall": 0.670000,
+      "hardness": 0.330000,
+      "predicted_hardness": 0.318026
+    },
+    {
+      "query_id": 40,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.275768
+    },
+    {
+      "query_id": 41,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.208590
+    },
+    {
+      "query_id": 42,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.440319
+    },
+    {
+      "query_id": 43,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.377180
+    },
+    {
+      "query_id": 44,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.080077
+    },
+    {
+      "query_id": 45,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.111282
+    },
+    {
+      "query_id": 46,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.074191
+    },
+    {
+      "query_id": 47,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.117001
+    },
+    {
+      "query_id": 48,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.222974
+    },
+    {
+      "query_id": 49,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.257163
+    },
+    {
+      "query_id": 50,
+      "recall": 0.670000,
+      "hardness": 0.330000,
+      "predicted_hardness": 0.309979
+    },
+    {
+      "query_id": 51,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.043314
+    },
+    {
+      "query_id": 52,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.196153
+    },
+    {
+      "query_id": 53,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.023433
+    },
+    {
+      "query_id": 54,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.106351
+    },
+    {
+      "query_id": 55,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.157443
+    },
+    {
+      "query_id": 56,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.176914
+    },
+    {
+      "query_id": 57,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.134841
+    },
+    {
+      "query_id": 58,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.235322
+    },
+    {
+      "query_id": 59,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.837150
+    },
+    {
+      "query_id": 60,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.139391
+    },
+    {
+      "query_id": 61,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.267444
+    },
+    {
+      "query_id": 62,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.337871
+    },
+    {
+      "query_id": 63,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.253503
+    },
+    {
+      "query_id": 64,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.523077
+    },
+    {
+      "query_id": 65,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.228671
+    },
+    {
+      "query_id": 66,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.315280
+    },
+    {
+      "query_id": 67,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.424993
+    },
+    {
+      "query_id": 68,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.553978
+    },
+    {
+      "query_id": 69,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.265226
+    },
+    {
+      "query_id": 70,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.190673
+    },
+    {
+      "query_id": 71,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.245453
+    },
+    {
+      "query_id": 72,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.131803
+    },
+    {
+      "query_id": 73,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.308303
+    },
+    {
+      "query_id": 74,
+      "recall": 0.330000,
+      "hardness": 0.670000,
+      "predicted_hardness": 0.313252
+    },
+    {
+      "query_id": 75,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.043152
+    },
+    {
+      "query_id": 76,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.409763
+    },
+    {
+      "query_id": 77,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.302382
+    },
+    {
+      "query_id": 78,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.416644
+    },
+    {
+      "query_id": 79,
+      "recall": 0.060000,
+      "hardness": 0.940000,
+      "predicted_hardness": 0.829506
+    },
+    {
+      "query_id": 80,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.928166
+    },
+    {
+      "query_id": 81,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.037647
+    },
+    {
+      "query_id": 82,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.570722
+    },
+    {
+      "query_id": 83,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.305079
+    },
+    {
+      "query_id": 84,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.099374
+    },
+    {
+      "query_id": 85,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.163894
+    },
+    {
+      "query_id": 86,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.235753
+    },
+    {
+      "query_id": 87,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.046955
+    },
+    {
+      "query_id": 88,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.093709
+    },
+    {
+      "query_id": 89,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.432231
+    },
+    {
+      "query_id": 90,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.278148
+    },
+    {
+      "query_id": 91,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.106280
+    },
+    {
+      "query_id": 92,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.091814
+    },
+    {
+      "query_id": 93,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.153055
+    },
+    {
+      "query_id": 94,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.161680
+    },
+    {
+      "query_id": 95,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.117564
+    },
+    {
+      "query_id": 96,
+      "recall": 0.050000,
+      "hardness": 0.950000,
+      "predicted_hardness": 0.518198
+    },
+    {
+      "query_id": 97,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.514074
+    },
+    {
+      "query_id": 98,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.273301
+    },
+    {
+      "query_id": 99,
+      "recall": 0.550000,
+      "hardness": 0.450000,
+      "predicted_hardness": 0.409109
+    },
+    {
+      "query_id": 100,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.039132
+    },
+    {
+      "query_id": 101,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.139101
+    },
+    {
+      "query_id": 102,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.659635
+    },
+    {
+      "query_id": 103,
+      "recall": 0.560000,
+      "hardness": 0.440000,
+      "predicted_hardness": 0.392490
+    },
+    {
+      "query_id": 104,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.270211
+    },
+    {
+      "query_id": 105,
+      "recall": 0.200000,
+      "hardness": 0.800000,
+      "predicted_hardness": 0.877269
+    },
+    {
+      "query_id": 106,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.197478
+    },
+    {
+      "query_id": 107,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.072422
+    },
+    {
+      "query_id": 108,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.220807
+    },
+    {
+      "query_id": 109,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.230005
+    },
+    {
+      "query_id": 110,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.353809
+    },
+    {
+      "query_id": 111,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.933192
+    },
+    {
+      "query_id": 112,
+      "recall": 0.390000,
+      "hardness": 0.610000,
+      "predicted_hardness": 0.686509
+    },
+    {
+      "query_id": 113,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.049861
+    },
+    {
+      "query_id": 114,
+      "recall": 0.450000,
+      "hardness": 0.550000,
+      "predicted_hardness": 0.300951
+    },
+    {
+      "query_id": 115,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.453907
+    },
+    {
+      "query_id": 116,
+      "recall": 0.500000,
+      "hardness": 0.500000,
+      "predicted_hardness": 0.508076
+    },
+    {
+      "query_id": 117,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.099892
+    },
+    {
+      "query_id": 118,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.997810
+    },
+    {
+      "query_id": 119,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.528400
+    },
+    {
+      "query_id": 120,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.365556
+    },
+    {
+      "query_id": 121,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.147613
+    },
+    {
+      "query_id": 122,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.355945
+    },
+    {
+      "query_id": 123,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.113730
+    },
+    {
+      "query_id": 124,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.999236
+    },
+    {
+      "query_id": 125,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.288863
+    },
+    {
+      "query_id": 126,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.145127
+    },
+    {
+      "query_id": 127,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.178610
+    },
+    {
+      "query_id": 128,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.114914
+    },
+    {
+      "query_id": 129,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.318038
+    },
+    {
+      "query_id": 130,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.033510
+    },
+    {
+      "query_id": 131,
+      "recall": 0.170000,
+      "hardness": 0.830000,
+      "predicted_hardness": 0.568207
+    },
+    {
+      "query_id": 132,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.185860
+    },
+    {
+      "query_id": 133,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.679698
+    },
+    {
+      "query_id": 134,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.515911
+    },
+    {
+      "query_id": 135,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.282165
+    },
+    {
+      "query_id": 136,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.224088
+    },
+    {
+      "query_id": 137,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.484320
+    },
+    {
+      "query_id": 138,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.642578
+    },
+    {
+      "query_id": 139,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.403145
+    },
+    {
+      "query_id": 140,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.215999
+    },
+    {
+      "query_id": 141,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.215333
+    },
+    {
+      "query_id": 142,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.251401
+    },
+    {
+      "query_id": 143,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.141829
+    },
+    {
+      "query_id": 144,
+      "recall": 0.070000,
+      "hardness": 0.930000,
+      "predicted_hardness": 0.287570
+    },
+    {
+      "query_id": 145,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.267072
+    },
+    {
+      "query_id": 146,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.252307
+    },
+    {
+      "query_id": 147,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.309330
+    },
+    {
+      "query_id": 148,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.104971
+    },
+    {
+      "query_id": 149,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.194061
+    },
+    {
+      "query_id": 150,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.110386
+    },
+    {
+      "query_id": 151,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.158560
+    },
+    {
+      "query_id": 152,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.931803
+    },
+    {
+      "query_id": 153,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.182399
+    },
+    {
+      "query_id": 154,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.220719
+    },
+    {
+      "query_id": 155,
+      "recall": 0.460000,
+      "hardness": 0.540000,
+      "predicted_hardness": 0.524881
+    },
+    {
+      "query_id": 156,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.308992
+    },
+    {
+      "query_id": 157,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.380710
+    },
+    {
+      "query_id": 158,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.227508
+    },
+    {
+      "query_id": 159,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.120506
+    },
+    {
+      "query_id": 160,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.284408
+    },
+    {
+      "query_id": 161,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.126815
+    },
+    {
+      "query_id": 162,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.153271
+    },
+    {
+      "query_id": 163,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.258269
+    },
+    {
+      "query_id": 164,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.104529
+    },
+    {
+      "query_id": 165,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.263103
+    },
+    {
+      "query_id": 166,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.321309
+    },
+    {
+      "query_id": 167,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.581384
+    },
+    {
+      "query_id": 168,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.295913
+    },
+    {
+      "query_id": 169,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.327566
+    },
+    {
+      "query_id": 170,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.089447
+    },
+    {
+      "query_id": 171,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.109096
+    },
+    {
+      "query_id": 172,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.122965
+    },
+    {
+      "query_id": 173,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.171136
+    },
+    {
+      "query_id": 174,
+      "recall": 0.410000,
+      "hardness": 0.590000,
+      "predicted_hardness": 0.490112
+    },
+    {
+      "query_id": 175,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.141873
+    },
+    {
+      "query_id": 176,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.237038
+    },
+    {
+      "query_id": 177,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.238803
+    },
+    {
+      "query_id": 178,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.374231
+    },
+    {
+      "query_id": 179,
+      "recall": 0.500000,
+      "hardness": 0.500000,
+      "predicted_hardness": 0.427609
+    },
+    {
+      "query_id": 180,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.144661
+    },
+    {
+      "query_id": 181,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.199541
+    },
+    {
+      "query_id": 182,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.058476
+    },
+    {
+      "query_id": 183,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.198539
+    },
+    {
+      "query_id": 184,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.109808
+    },
+    {
+      "query_id": 185,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.021806
+    },
+    {
+      "query_id": 186,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.196076
+    },
+    {
+      "query_id": 187,
+      "recall": 0.320000,
+      "hardness": 0.680000,
+      "predicted_hardness": 0.513642
+    },
+    {
+      "query_id": 188,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.584199
+    },
+    {
+      "query_id": 189,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.517530
+    },
+    {
+      "query_id": 190,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.296013
+    },
+    {
+      "query_id": 191,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.281544
+    },
+    {
+      "query_id": 192,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.199448
+    },
+    {
+      "query_id": 193,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.213408
+    },
+    {
+      "query_id": 194,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.050265
+    },
+    {
+      "query_id": 195,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.272818
+    },
+    {
+      "query_id": 196,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.211975
+    },
+    {
+      "query_id": 197,
+      "recall": 0.410000,
+      "hardness": 0.590000,
+      "predicted_hardness": 0.388988
+    },
+    {
+      "query_id": 198,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.044734
+    },
+    {
+      "query_id": 199,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.484204
+    },
+    {
+      "query_id": 200,
+      "recall": 0.070000,
+      "hardness": 0.930000,
+      "predicted_hardness": 0.649627
+    },
+    {
+      "query_id": 201,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.127766
+    },
+    {
+      "query_id": 202,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.322386
+    },
+    {
+      "query_id": 203,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.269163
+    },
+    {
+      "query_id": 204,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.365267
+    },
+    {
+      "query_id": 205,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.142494
+    },
+    {
+      "query_id": 206,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.071371
+    },
+    {
+      "query_id": 207,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.236842
+    },
+    {
+      "query_id": 208,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.283617
+    },
+    {
+      "query_id": 209,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.404289
+    },
+    {
+      "query_id": 210,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.210990
+    },
+    {
+      "query_id": 211,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.486869
+    },
+    {
+      "query_id": 212,
+      "recall": 0.650000,
+      "hardness": 0.350000,
+      "predicted_hardness": 0.279615
+    },
+    {
+      "query_id": 213,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.362180
+    },
+    {
+      "query_id": 214,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.431666
+    },
+    {
+      "query_id": 215,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.383190
+    },
+    {
+      "query_id": 216,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.100780
+    },
+    {
+      "query_id": 217,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.310209
+    },
+    {
+      "query_id": 218,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.332067
+    },
+    {
+      "query_id": 219,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.156757
+    },
+    {
+      "query_id": 220,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.392342
+    },
+    {
+      "query_id": 221,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.308774
+    },
+    {
+      "query_id": 222,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.197166
+    },
+    {
+      "query_id": 223,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.225190
+    },
+    {
+      "query_id": 224,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.250253
+    },
+    {
+      "query_id": 225,
+      "recall": 0.530000,
+      "hardness": 0.470000,
+      "predicted_hardness": 0.448599
+    },
+    {
+      "query_id": 226,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.141850
+    },
+    {
+      "query_id": 227,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.047551
+    },
+    {
+      "query_id": 228,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.136109
+    },
+    {
+      "query_id": 229,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.155101
+    },
+    {
+      "query_id": 230,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.293325
+    },
+    {
+      "query_id": 231,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.418598
+    },
+    {
+      "query_id": 232,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.144262
+    },
+    {
+      "query_id": 233,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.127894
+    },
+    {
+      "query_id": 234,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.142014
+    },
+    {
+      "query_id": 235,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.210281
+    },
+    {
+      "query_id": 236,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.062976
+    },
+    {
+      "query_id": 237,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.293700
+    },
+    {
+      "query_id": 238,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.244249
+    },
+    {
+      "query_id": 239,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.155033
+    },
+    {
+      "query_id": 240,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.348124
+    },
+    {
+      "query_id": 241,
+      "recall": 0.670000,
+      "hardness": 0.330000,
+      "predicted_hardness": 0.340246
+    },
+    {
+      "query_id": 242,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.143944
+    },
+    {
+      "query_id": 243,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.281183
+    },
+    {
+      "query_id": 244,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.034119
+    },
+    {
+      "query_id": 245,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.133156
+    },
+    {
+      "query_id": 246,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.454267
+    },
+    {
+      "query_id": 247,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.287702
+    },
+    {
+      "query_id": 248,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.308719
+    },
+    {
+      "query_id": 249,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.256293
+    },
+    {
+      "query_id": 250,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.103041
+    },
+    {
+      "query_id": 251,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.465643
+    },
+    {
+      "query_id": 252,
+      "recall": 0.500000,
+      "hardness": 0.500000,
+      "predicted_hardness": 0.842980
+    },
+    {
+      "query_id": 253,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.158419
+    },
+    {
+      "query_id": 254,
+      "recall": 0.210000,
+      "hardness": 0.790000,
+      "predicted_hardness": 0.762903
+    },
+    {
+      "query_id": 255,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.162760
+    },
+    {
+      "query_id": 256,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.260061
+    },
+    {
+      "query_id": 257,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.270885
+    },
+    {
+      "query_id": 258,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.513120
+    },
+    {
+      "query_id": 259,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.319937
+    },
+    {
+      "query_id": 260,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.223927
+    },
+    {
+      "query_id": 261,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.313755
+    },
+    {
+      "query_id": 262,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.074719
+    },
+    {
+      "query_id": 263,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.328301
+    },
+    {
+      "query_id": 264,
+      "recall": 0.560000,
+      "hardness": 0.440000,
+      "predicted_hardness": 0.367882
+    },
+    {
+      "query_id": 265,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.240302
+    },
+    {
+      "query_id": 266,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.417381
+    },
+    {
+      "query_id": 267,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.224069
+    },
+    {
+      "query_id": 268,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.389061
+    },
+    {
+      "query_id": 269,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.196576
+    },
+    {
+      "query_id": 270,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.079738
+    },
+    {
+      "query_id": 271,
+      "recall": 0.040000,
+      "hardness": 0.960000,
+      "predicted_hardness": 0.618390
+    },
+    {
+      "query_id": 272,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.272247
+    },
+    {
+      "query_id": 273,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.152170
+    },
+    {
+      "query_id": 274,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.280006
+    },
+    {
+      "query_id": 275,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.146130
+    },
+    {
+      "query_id": 276,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.373594
+    },
+    {
+      "query_id": 277,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.113903
+    },
+    {
+      "query_id": 278,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.134990
+    },
+    {
+      "query_id": 279,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.206688
+    },
+    {
+      "query_id": 280,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.097965
+    },
+    {
+      "query_id": 281,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.195153
+    },
+    {
+      "query_id": 282,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.124551
+    },
+    {
+      "query_id": 283,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.428343
+    },
+    {
+      "query_id": 284,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.094479
+    },
+    {
+      "query_id": 285,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.225940
+    },
+    {
+      "query_id": 286,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.257720
+    },
+    {
+      "query_id": 287,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.336116
+    },
+    {
+      "query_id": 288,
+      "recall": 0.420000,
+      "hardness": 0.580000,
+      "predicted_hardness": 0.436621
+    },
+    {
+      "query_id": 289,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.159629
+    },
+    {
+      "query_id": 290,
+      "recall": 0.500000,
+      "hardness": 0.500000,
+      "predicted_hardness": 0.557542
+    },
+    {
+      "query_id": 291,
+      "recall": 0.420000,
+      "hardness": 0.580000,
+      "predicted_hardness": 0.347839
+    },
+    {
+      "query_id": 292,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.352829
+    },
+    {
+      "query_id": 293,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.057464
+    },
+    {
+      "query_id": 294,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.639153
+    },
+    {
+      "query_id": 295,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.160279
+    },
+    {
+      "query_id": 296,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.280823
+    },
+    {
+      "query_id": 297,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.089801
+    },
+    {
+      "query_id": 298,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.309957
+    },
+    {
+      "query_id": 299,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.207571
+    },
+    {
+      "query_id": 300,
+      "recall": 0.630000,
+      "hardness": 0.370000,
+      "predicted_hardness": 0.211509
+    },
+    {
+      "query_id": 301,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.030114
+    },
+    {
+      "query_id": 302,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.042004
+    },
+    {
+      "query_id": 303,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.293306
+    },
+    {
+      "query_id": 304,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.086080
+    },
+    {
+      "query_id": 305,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.157798
+    },
+    {
+      "query_id": 306,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.068040
+    },
+    {
+      "query_id": 307,
+      "recall": 0.010000,
+      "hardness": 0.990000,
+      "predicted_hardness": 0.851577
+    },
+    {
+      "query_id": 308,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.162727
+    },
+    {
+      "query_id": 309,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.075091
+    },
+    {
+      "query_id": 310,
+      "recall": 0.480000,
+      "hardness": 0.520000,
+      "predicted_hardness": 0.581315
+    },
+    {
+      "query_id": 311,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.062026
+    },
+    {
+      "query_id": 312,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.096860
+    },
+    {
+      "query_id": 313,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.074268
+    },
+    {
+      "query_id": 314,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.158745
+    },
+    {
+      "query_id": 315,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.275442
+    },
+    {
+      "query_id": 316,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.268989
+    },
+    {
+      "query_id": 317,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.515881
+    },
+    {
+      "query_id": 318,
+      "recall": 0.590000,
+      "hardness": 0.410000,
+      "predicted_hardness": 0.607944
+    },
+    {
+      "query_id": 319,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.248186
+    },
+    {
+      "query_id": 320,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.338047
+    },
+    {
+      "query_id": 321,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.283280
+    },
+    {
+      "query_id": 322,
+      "recall": 0.020000,
+      "hardness": 0.980000,
+      "predicted_hardness": 0.892365
+    },
+    {
+      "query_id": 323,
+      "recall": 0.130000,
+      "hardness": 0.870000,
+      "predicted_hardness": 0.587222
+    },
+    {
+      "query_id": 324,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.102775
+    },
+    {
+      "query_id": 325,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.249484
+    },
+    {
+      "query_id": 326,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.384241
+    },
+    {
+      "query_id": 327,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.209698
+    },
+    {
+      "query_id": 328,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.147695
+    },
+    {
+      "query_id": 329,
+      "recall": 0.090000,
+      "hardness": 0.910000,
+      "predicted_hardness": 0.470331
+    },
+    {
+      "query_id": 330,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.087119
+    },
+    {
+      "query_id": 331,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.413378
+    },
+    {
+      "query_id": 332,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.024872
+    },
+    {
+      "query_id": 333,
+      "recall": 0.630000,
+      "hardness": 0.370000,
+      "predicted_hardness": 0.320673
+    },
+    {
+      "query_id": 334,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.067644
+    },
+    {
+      "query_id": 335,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.428569
+    },
+    {
+      "query_id": 336,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.059926
+    },
+    {
+      "query_id": 337,
+      "recall": 0.290000,
+      "hardness": 0.710000,
+      "predicted_hardness": 0.449036
+    },
+    {
+      "query_id": 338,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.097386
+    },
+    {
+      "query_id": 339,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.320789
+    },
+    {
+      "query_id": 340,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.132152
+    },
+    {
+      "query_id": 341,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.261113
+    },
+    {
+      "query_id": 342,
+      "recall": 0.280000,
+      "hardness": 0.720000,
+      "predicted_hardness": 0.326290
+    },
+    {
+      "query_id": 343,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.106367
+    },
+    {
+      "query_id": 344,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.043505
+    },
+    {
+      "query_id": 345,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.084188
+    },
+    {
+      "query_id": 346,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.334103
+    },
+    {
+      "query_id": 347,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.380818
+    },
+    {
+      "query_id": 348,
+      "recall": 0.060000,
+      "hardness": 0.940000,
+      "predicted_hardness": 0.969671
+    },
+    {
+      "query_id": 349,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.215718
+    },
+    {
+      "query_id": 350,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.229083
+    },
+    {
+      "query_id": 351,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.182655
+    },
+    {
+      "query_id": 352,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.372323
+    },
+    {
+      "query_id": 353,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.286907
+    },
+    {
+      "query_id": 354,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.098636
+    },
+    {
+      "query_id": 355,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.449612
+    },
+    {
+      "query_id": 356,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.372612
+    },
+    {
+      "query_id": 357,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.354199
+    },
+    {
+      "query_id": 358,
+      "recall": 0.240000,
+      "hardness": 0.760000,
+      "predicted_hardness": 0.486382
+    },
+    {
+      "query_id": 359,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.119920
+    },
+    {
+      "query_id": 360,
+      "recall": 0.180000,
+      "hardness": 0.820000,
+      "predicted_hardness": 0.405789
+    },
+    {
+      "query_id": 361,
+      "recall": 0.420000,
+      "hardness": 0.580000,
+      "predicted_hardness": 0.661846
+    },
+    {
+      "query_id": 362,
+      "recall": 0.460000,
+      "hardness": 0.540000,
+      "predicted_hardness": 0.332185
+    },
+    {
+      "query_id": 363,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.337905
+    },
+    {
+      "query_id": 364,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.122322
+    },
+    {
+      "query_id": 365,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.031567
+    },
+    {
+      "query_id": 366,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.268479
+    },
+    {
+      "query_id": 367,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.354293
+    },
+    {
+      "query_id": 368,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.389267
+    },
+    {
+      "query_id": 369,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.265815
+    },
+    {
+      "query_id": 370,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.216946
+    },
+    {
+      "query_id": 371,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.209397
+    },
+    {
+      "query_id": 372,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.037512
+    },
+    {
+      "query_id": 373,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.025901
+    },
+    {
+      "query_id": 374,
+      "recall": 0.320000,
+      "hardness": 0.680000,
+      "predicted_hardness": 0.224587
+    },
+    {
+      "query_id": 375,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.156157
+    },
+    {
+      "query_id": 376,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.189889
+    },
+    {
+      "query_id": 377,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.156199
+    },
+    {
+      "query_id": 378,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.393147
+    },
+    {
+      "query_id": 379,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.067153
+    },
+    {
+      "query_id": 380,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.169563
+    },
+    {
+      "query_id": 381,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.269074
+    },
+    {
+      "query_id": 382,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.096180
+    },
+    {
+      "query_id": 383,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.430951
+    },
+    {
+      "query_id": 384,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.174840
+    },
+    {
+      "query_id": 385,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.368304
+    },
+    {
+      "query_id": 386,
+      "recall": 0.650000,
+      "hardness": 0.350000,
+      "predicted_hardness": 0.384607
+    },
+    {
+      "query_id": 387,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.169270
+    },
+    {
+      "query_id": 388,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.998511
+    },
+    {
+      "query_id": 389,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.258724
+    },
+    {
+      "query_id": 390,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.129370
+    },
+    {
+      "query_id": 391,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.188611
+    },
+    {
+      "query_id": 392,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.032992
+    },
+    {
+      "query_id": 393,
+      "recall": 0.030000,
+      "hardness": 0.970000,
+      "predicted_hardness": 0.305452
+    },
+    {
+      "query_id": 394,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.042149
+    },
+    {
+      "query_id": 395,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.446544
+    },
+    {
+      "query_id": 396,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.156806
+    },
+    {
+      "query_id": 397,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.137335
+    },
+    {
+      "query_id": 398,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.170090
+    },
+    {
+      "query_id": 399,
+      "recall": 0.530000,
+      "hardness": 0.470000,
+      "predicted_hardness": 0.545044
+    },
+    {
+      "query_id": 400,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.286706
+    },
+    {
+      "query_id": 401,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.591370
+    },
+    {
+      "query_id": 402,
+      "recall": 0.350000,
+      "hardness": 0.650000,
+      "predicted_hardness": 0.754121
+    },
+    {
+      "query_id": 403,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.248349
+    },
+    {
+      "query_id": 404,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.036733
+    },
+    {
+      "query_id": 405,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.160482
+    },
+    {
+      "query_id": 406,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.168424
+    },
+    {
+      "query_id": 407,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.183666
+    },
+    {
+      "query_id": 408,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.209065
+    },
+    {
+      "query_id": 409,
+      "recall": 0.070000,
+      "hardness": 0.930000,
+      "predicted_hardness": 0.158013
+    },
+    {
+      "query_id": 410,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.425371
+    },
+    {
+      "query_id": 411,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.425000
+    },
+    {
+      "query_id": 412,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.348653
+    },
+    {
+      "query_id": 413,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.430847
+    },
+    {
+      "query_id": 414,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.258128
+    },
+    {
+      "query_id": 415,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.249484
+    },
+    {
+      "query_id": 416,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.116790
+    },
+    {
+      "query_id": 417,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.091573
+    },
+    {
+      "query_id": 418,
+      "recall": 0.560000,
+      "hardness": 0.440000,
+      "predicted_hardness": 0.475834
+    },
+    {
+      "query_id": 419,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.122785
+    },
+    {
+      "query_id": 420,
+      "recall": 0.530000,
+      "hardness": 0.470000,
+      "predicted_hardness": 0.383038
+    },
+    {
+      "query_id": 421,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.191026
+    },
+    {
+      "query_id": 422,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.340522
+    },
+    {
+      "query_id": 423,
+      "recall": 0.010000,
+      "hardness": 0.990000,
+      "predicted_hardness": 0.617810
+    },
+    {
+      "query_id": 424,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.052378
+    },
+    {
+      "query_id": 425,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.279457
+    },
+    {
+      "query_id": 426,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.262755
+    },
+    {
+      "query_id": 427,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.207242
+    },
+    {
+      "query_id": 428,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.261618
+    },
+    {
+      "query_id": 429,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.252297
+    },
+    {
+      "query_id": 430,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.159878
+    },
+    {
+      "query_id": 431,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.315420
+    },
+    {
+      "query_id": 432,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.256349
+    },
+    {
+      "query_id": 433,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.036707
+    },
+    {
+      "query_id": 434,
+      "recall": 0.490000,
+      "hardness": 0.510000,
+      "predicted_hardness": 0.572812
+    },
+    {
+      "query_id": 435,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.108331
+    },
+    {
+      "query_id": 436,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.112394
+    },
+    {
+      "query_id": 437,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.354775
+    },
+    {
+      "query_id": 438,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.233183
+    },
+    {
+      "query_id": 439,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.226677
+    },
+    {
+      "query_id": 440,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.223344
+    },
+    {
+      "query_id": 441,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.218266
+    },
+    {
+      "query_id": 442,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.322815
+    },
+    {
+      "query_id": 443,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.065142
+    },
+    {
+      "query_id": 444,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.140374
+    },
+    {
+      "query_id": 445,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.299043
+    },
+    {
+      "query_id": 446,
+      "recall": 0.350000,
+      "hardness": 0.650000,
+      "predicted_hardness": 0.493172
+    },
+    {
+      "query_id": 447,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.297532
+    },
+    {
+      "query_id": 448,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.351679
+    },
+    {
+      "query_id": 449,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.230830
+    },
+    {
+      "query_id": 450,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.353153
+    },
+    {
+      "query_id": 451,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.109024
+    },
+    {
+      "query_id": 452,
+      "recall": 0.450000,
+      "hardness": 0.550000,
+      "predicted_hardness": 0.671195
+    },
+    {
+      "query_id": 453,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.784278
+    },
+    {
+      "query_id": 454,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.043425
+    },
+    {
+      "query_id": 455,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.304138
+    },
+    {
+      "query_id": 456,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.112642
+    },
+    {
+      "query_id": 457,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.068333
+    },
+    {
+      "query_id": 458,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.340531
+    },
+    {
+      "query_id": 459,
+      "recall": 0.510000,
+      "hardness": 0.490000,
+      "predicted_hardness": 0.489664
+    },
+    {
+      "query_id": 460,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.108341
+    },
+    {
+      "query_id": 461,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.054778
+    },
+    {
+      "query_id": 462,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.171430
+    },
+    {
+      "query_id": 463,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.088440
+    },
+    {
+      "query_id": 464,
+      "recall": 0.450000,
+      "hardness": 0.550000,
+      "predicted_hardness": 0.468479
+    },
+    {
+      "query_id": 465,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.127157
+    },
+    {
+      "query_id": 466,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.977661
+    },
+    {
+      "query_id": 467,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.034259
+    },
+    {
+      "query_id": 468,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.197670
+    },
+    {
+      "query_id": 469,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.859072
+    },
+    {
+      "query_id": 470,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.239467
+    },
+    {
+      "query_id": 471,
+      "recall": 0.280000,
+      "hardness": 0.720000,
+      "predicted_hardness": 0.352631
+    },
+    {
+      "query_id": 472,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.291561
+    },
+    {
+      "query_id": 473,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.536756
+    },
+    {
+      "query_id": 474,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.088223
+    },
+    {
+      "query_id": 475,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.109009
+    },
+    {
+      "query_id": 476,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.128190
+    },
+    {
+      "query_id": 477,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.073111
+    },
+    {
+      "query_id": 478,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.308356
+    },
+    {
+      "query_id": 479,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.066856
+    },
+    {
+      "query_id": 480,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.057966
+    },
+    {
+      "query_id": 481,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.036109
+    },
+    {
+      "query_id": 482,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.217531
+    },
+    {
+      "query_id": 483,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.280564
+    },
+    {
+      "query_id": 484,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.279119
+    },
+    {
+      "query_id": 485,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.154476
+    },
+    {
+      "query_id": 486,
+      "recall": 0.510000,
+      "hardness": 0.490000,
+      "predicted_hardness": 0.342616
+    },
+    {
+      "query_id": 487,
+      "recall": 0.480000,
+      "hardness": 0.520000,
+      "predicted_hardness": 0.420520
+    },
+    {
+      "query_id": 488,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.392131
+    },
+    {
+      "query_id": 489,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.197030
+    },
+    {
+      "query_id": 490,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.398332
+    },
+    {
+      "query_id": 491,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.074281
+    },
+    {
+      "query_id": 492,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.320497
+    },
+    {
+      "query_id": 493,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.203041
+    },
+    {
+      "query_id": 494,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.338033
+    },
+    {
+      "query_id": 495,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.065628
+    },
+    {
+      "query_id": 496,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.564228
+    },
+    {
+      "query_id": 497,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.365051
+    },
+    {
+      "query_id": 498,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.059009
+    },
+    {
+      "query_id": 499,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.621694
+    },
+    {
+      "query_id": 500,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.476925
+    },
+    {
+      "query_id": 501,
+      "recall": 0.540000,
+      "hardness": 0.460000,
+      "predicted_hardness": 0.411437
+    },
+    {
+      "query_id": 502,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.214093
+    },
+    {
+      "query_id": 503,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.148522
+    },
+    {
+      "query_id": 504,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.598365
+    },
+    {
+      "query_id": 505,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.421865
+    },
+    {
+      "query_id": 506,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.110770
+    },
+    {
+      "query_id": 507,
+      "recall": 0.070000,
+      "hardness": 0.930000,
+      "predicted_hardness": 0.558636
+    },
+    {
+      "query_id": 508,
+      "recall": 0.460000,
+      "hardness": 0.540000,
+      "predicted_hardness": 0.432774
+    },
+    {
+      "query_id": 509,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.181957
+    },
+    {
+      "query_id": 510,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.149611
+    },
+    {
+      "query_id": 511,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.280767
+    },
+    {
+      "query_id": 512,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.284724
+    },
+    {
+      "query_id": 513,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.147659
+    },
+    {
+      "query_id": 514,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.047586
+    },
+    {
+      "query_id": 515,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.253583
+    },
+    {
+      "query_id": 516,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.237265
+    },
+    {
+      "query_id": 517,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.253464
+    },
+    {
+      "query_id": 518,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.102447
+    },
+    {
+      "query_id": 519,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.213293
+    },
+    {
+      "query_id": 520,
+      "recall": 0.060000,
+      "hardness": 0.940000,
+      "predicted_hardness": 0.500724
+    },
+    {
+      "query_id": 521,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.045099
+    },
+    {
+      "query_id": 522,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.347179
+    },
+    {
+      "query_id": 523,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.395355
+    },
+    {
+      "query_id": 524,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.161279
+    },
+    {
+      "query_id": 525,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.402023
+    },
+    {
+      "query_id": 526,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.114984
+    },
+    {
+      "query_id": 527,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.188900
+    },
+    {
+      "query_id": 528,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.254491
+    },
+    {
+      "query_id": 529,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.998822
+    },
+    {
+      "query_id": 530,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.151440
+    },
+    {
+      "query_id": 531,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.663803
+    },
+    {
+      "query_id": 532,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.161152
+    },
+    {
+      "query_id": 533,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.083519
+    },
+    {
+      "query_id": 534,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.050263
+    },
+    {
+      "query_id": 535,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.199334
+    },
+    {
+      "query_id": 536,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.151832
+    },
+    {
+      "query_id": 537,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.410818
+    },
+    {
+      "query_id": 538,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.224431
+    },
+    {
+      "query_id": 539,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.343333
+    },
+    {
+      "query_id": 540,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.167088
+    },
+    {
+      "query_id": 541,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.249516
+    },
+    {
+      "query_id": 542,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.074518
+    },
+    {
+      "query_id": 543,
+      "recall": 0.540000,
+      "hardness": 0.460000,
+      "predicted_hardness": 0.340209
+    },
+    {
+      "query_id": 544,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.093005
+    },
+    {
+      "query_id": 545,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.239307
+    },
+    {
+      "query_id": 546,
+      "recall": 0.340000,
+      "hardness": 0.660000,
+      "predicted_hardness": 0.548227
+    },
+    {
+      "query_id": 547,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.098764
+    },
+    {
+      "query_id": 548,
+      "recall": 0.080000,
+      "hardness": 0.920000,
+      "predicted_hardness": 0.586357
+    },
+    {
+      "query_id": 549,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.476614
+    },
+    {
+      "query_id": 550,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.241440
+    },
+    {
+      "query_id": 551,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.365822
+    },
+    {
+      "query_id": 552,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.089156
+    },
+    {
+      "query_id": 553,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.143695
+    },
+    {
+      "query_id": 554,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.082426
+    },
+    {
+      "query_id": 555,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.109205
+    },
+    {
+      "query_id": 556,
+      "recall": 0.350000,
+      "hardness": 0.650000,
+      "predicted_hardness": 0.413108
+    },
+    {
+      "query_id": 557,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.091965
+    },
+    {
+      "query_id": 558,
+      "recall": 0.360000,
+      "hardness": 0.640000,
+      "predicted_hardness": 0.737561
+    },
+    {
+      "query_id": 559,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.344037
+    },
+    {
+      "query_id": 560,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.063984
+    },
+    {
+      "query_id": 561,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.064362
+    },
+    {
+      "query_id": 562,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.635977
+    },
+    {
+      "query_id": 563,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.137596
+    },
+    {
+      "query_id": 564,
+      "recall": 0.480000,
+      "hardness": 0.520000,
+      "predicted_hardness": 0.484397
+    },
+    {
+      "query_id": 565,
+      "recall": 0.400000,
+      "hardness": 0.600000,
+      "predicted_hardness": 0.381777
+    },
+    {
+      "query_id": 566,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.048846
+    },
+    {
+      "query_id": 567,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.382495
+    },
+    {
+      "query_id": 568,
+      "recall": 0.080000,
+      "hardness": 0.920000,
+      "predicted_hardness": 0.483199
+    },
+    {
+      "query_id": 569,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.357490
+    },
+    {
+      "query_id": 570,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.190479
+    },
+    {
+      "query_id": 571,
+      "recall": 0.450000,
+      "hardness": 0.550000,
+      "predicted_hardness": 0.292389
+    },
+    {
+      "query_id": 572,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.091575
+    },
+    {
+      "query_id": 573,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.120318
+    },
+    {
+      "query_id": 574,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.061222
+    },
+    {
+      "query_id": 575,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.274136
+    },
+    {
+      "query_id": 576,
+      "recall": 0.590000,
+      "hardness": 0.410000,
+      "predicted_hardness": 0.323163
+    },
+    {
+      "query_id": 577,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.188044
+    },
+    {
+      "query_id": 578,
+      "recall": 0.470000,
+      "hardness": 0.530000,
+      "predicted_hardness": 0.388560
+    },
+    {
+      "query_id": 579,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.346079
+    },
+    {
+      "query_id": 580,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.306430
+    },
+    {
+      "query_id": 581,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.221306
+    },
+    {
+      "query_id": 582,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.207338
+    },
+    {
+      "query_id": 583,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.041146
+    },
+    {
+      "query_id": 584,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.311309
+    },
+    {
+      "query_id": 585,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.236457
+    },
+    {
+      "query_id": 586,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.147581
+    },
+    {
+      "query_id": 587,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.241112
+    },
+    {
+      "query_id": 588,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.341551
+    },
+    {
+      "query_id": 589,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.050035
+    },
+    {
+      "query_id": 590,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.179100
+    },
+    {
+      "query_id": 591,
+      "recall": 0.370000,
+      "hardness": 0.630000,
+      "predicted_hardness": 0.601653
+    },
+    {
+      "query_id": 592,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.036459
+    },
+    {
+      "query_id": 593,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.083495
+    },
+    {
+      "query_id": 594,
+      "recall": 0.420000,
+      "hardness": 0.580000,
+      "predicted_hardness": 0.279096
+    },
+    {
+      "query_id": 595,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.281751
+    },
+    {
+      "query_id": 596,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.468729
+    },
+    {
+      "query_id": 597,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.153112
+    },
+    {
+      "query_id": 598,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.143405
+    },
+    {
+      "query_id": 599,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.204514
+    },
+    {
+      "query_id": 600,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.095097
+    },
+    {
+      "query_id": 601,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.089214
+    },
+    {
+      "query_id": 602,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.049588
+    },
+    {
+      "query_id": 603,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.304993
+    },
+    {
+      "query_id": 604,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.052398
+    },
+    {
+      "query_id": 605,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.184154
+    },
+    {
+      "query_id": 606,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.192201
+    },
+    {
+      "query_id": 607,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.261469
+    },
+    {
+      "query_id": 608,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.325791
+    },
+    {
+      "query_id": 609,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.191675
+    },
+    {
+      "query_id": 610,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.325595
+    },
+    {
+      "query_id": 611,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.299868
+    },
+    {
+      "query_id": 612,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.068128
+    },
+    {
+      "query_id": 613,
+      "recall": 0.400000,
+      "hardness": 0.600000,
+      "predicted_hardness": 0.425726
+    },
+    {
+      "query_id": 614,
+      "recall": 0.240000,
+      "hardness": 0.760000,
+      "predicted_hardness": 0.888409
+    },
+    {
+      "query_id": 615,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.074152
+    },
+    {
+      "query_id": 616,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.542389
+    },
+    {
+      "query_id": 617,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.275801
+    },
+    {
+      "query_id": 618,
+      "recall": 0.490000,
+      "hardness": 0.510000,
+      "predicted_hardness": 0.474249
+    },
+    {
+      "query_id": 619,
+      "recall": 0.080000,
+      "hardness": 0.920000,
+      "predicted_hardness": 0.415033
+    },
+    {
+      "query_id": 620,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.322189
+    },
+    {
+      "query_id": 621,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.253912
+    },
+    {
+      "query_id": 622,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.128713
+    },
+    {
+      "query_id": 623,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.339707
+    },
+    {
+      "query_id": 624,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.124610
+    },
+    {
+      "query_id": 625,
+      "recall": 0.230000,
+      "hardness": 0.770000,
+      "predicted_hardness": 0.431985
+    },
+    {
+      "query_id": 626,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.076945
+    },
+    {
+      "query_id": 627,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.375322
+    },
+    {
+      "query_id": 628,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.162286
+    },
+    {
+      "query_id": 629,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.207429
+    },
+    {
+      "query_id": 630,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.393175
+    },
+    {
+      "query_id": 631,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.084316
+    },
+    {
+      "query_id": 632,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.413353
+    },
+    {
+      "query_id": 633,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.091376
+    },
+    {
+      "query_id": 634,
+      "recall": 0.240000,
+      "hardness": 0.760000,
+      "predicted_hardness": 0.675138
+    },
+    {
+      "query_id": 635,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.254935
+    },
+    {
+      "query_id": 636,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.148577
+    },
+    {
+      "query_id": 637,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.278218
+    },
+    {
+      "query_id": 638,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.226101
+    },
+    {
+      "query_id": 639,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.232443
+    },
+    {
+      "query_id": 640,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.297047
+    },
+    {
+      "query_id": 641,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.069284
+    },
+    {
+      "query_id": 642,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.218135
+    },
+    {
+      "query_id": 643,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.587714
+    },
+    {
+      "query_id": 644,
+      "recall": 0.020000,
+      "hardness": 0.980000,
+      "predicted_hardness": 0.924917
+    },
+    {
+      "query_id": 645,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.962345
+    },
+    {
+      "query_id": 646,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.159009
+    },
+    {
+      "query_id": 647,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.054531
+    },
+    {
+      "query_id": 648,
+      "recall": 0.050000,
+      "hardness": 0.950000,
+      "predicted_hardness": 0.667438
+    },
+    {
+      "query_id": 649,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.126433
+    },
+    {
+      "query_id": 650,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.047763
+    },
+    {
+      "query_id": 651,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.312797
+    },
+    {
+      "query_id": 652,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.132068
+    },
+    {
+      "query_id": 653,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.164235
+    },
+    {
+      "query_id": 654,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.332889
+    },
+    {
+      "query_id": 655,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.420733
+    },
+    {
+      "query_id": 656,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.152921
+    },
+    {
+      "query_id": 657,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.296322
+    },
+    {
+      "query_id": 658,
+      "recall": 0.420000,
+      "hardness": 0.580000,
+      "predicted_hardness": 0.428852
+    },
+    {
+      "query_id": 659,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.300618
+    },
+    {
+      "query_id": 660,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.199533
+    },
+    {
+      "query_id": 661,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.908265
+    },
+    {
+      "query_id": 662,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.056851
+    },
+    {
+      "query_id": 663,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.348480
+    },
+    {
+      "query_id": 664,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.175943
+    },
+    {
+      "query_id": 665,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.237160
+    },
+    {
+      "query_id": 666,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.178449
+    },
+    {
+      "query_id": 667,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.196688
+    },
+    {
+      "query_id": 668,
+      "recall": 0.560000,
+      "hardness": 0.440000,
+      "predicted_hardness": 0.339896
+    },
+    {
+      "query_id": 669,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.135603
+    },
+    {
+      "query_id": 670,
+      "recall": 0.390000,
+      "hardness": 0.610000,
+      "predicted_hardness": 0.717405
+    },
+    {
+      "query_id": 671,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.152264
+    },
+    {
+      "query_id": 672,
+      "recall": 0.140000,
+      "hardness": 0.860000,
+      "predicted_hardness": 0.915196
+    },
+    {
+      "query_id": 673,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.151553
+    },
+    {
+      "query_id": 674,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.169416
+    },
+    {
+      "query_id": 675,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.033620
+    },
+    {
+      "query_id": 676,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.175682
+    },
+    {
+      "query_id": 677,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.046624
+    },
+    {
+      "query_id": 678,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.260864
+    },
+    {
+      "query_id": 679,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.244111
+    },
+    {
+      "query_id": 680,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.162229
+    },
+    {
+      "query_id": 681,
+      "recall": 0.060000,
+      "hardness": 0.940000,
+      "predicted_hardness": 0.633572
+    },
+    {
+      "query_id": 682,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.082499
+    },
+    {
+      "query_id": 683,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.122242
+    },
+    {
+      "query_id": 684,
+      "recall": 0.080000,
+      "hardness": 0.920000,
+      "predicted_hardness": 0.562574
+    },
+    {
+      "query_id": 685,
+      "recall": 0.560000,
+      "hardness": 0.440000,
+      "predicted_hardness": 0.361039
+    },
+    {
+      "query_id": 686,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.186602
+    },
+    {
+      "query_id": 687,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.057364
+    },
+    {
+      "query_id": 688,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.282780
+    },
+    {
+      "query_id": 689,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.369528
+    },
+    {
+      "query_id": 690,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.263292
+    },
+    {
+      "query_id": 691,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.140686
+    },
+    {
+      "query_id": 692,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.268004
+    },
+    {
+      "query_id": 693,
+      "recall": 0.020000,
+      "hardness": 0.980000,
+      "predicted_hardness": 0.688914
+    },
+    {
+      "query_id": 694,
+      "recall": 0.370000,
+      "hardness": 0.630000,
+      "predicted_hardness": 0.438707
+    },
+    {
+      "query_id": 695,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.393227
+    },
+    {
+      "query_id": 696,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.485348
+    },
+    {
+      "query_id": 697,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.776787
+    },
+    {
+      "query_id": 698,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.203251
+    },
+    {
+      "query_id": 699,
+      "recall": 0.670000,
+      "hardness": 0.330000,
+      "predicted_hardness": 0.094151
+    },
+    {
+      "query_id": 700,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.126522
+    },
+    {
+      "query_id": 701,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.132941
+    },
+    {
+      "query_id": 702,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.442046
+    },
+    {
+      "query_id": 703,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.179440
+    },
+    {
+      "query_id": 704,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.196137
+    },
+    {
+      "query_id": 705,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.253151
+    },
+    {
+      "query_id": 706,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.223967
+    },
+    {
+      "query_id": 707,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.350349
+    },
+    {
+      "query_id": 708,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.481435
+    },
+    {
+      "query_id": 709,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.363848
+    },
+    {
+      "query_id": 710,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.222720
+    },
+    {
+      "query_id": 711,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.485238
+    },
+    {
+      "query_id": 712,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.265410
+    },
+    {
+      "query_id": 713,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.130774
+    },
+    {
+      "query_id": 714,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.070424
+    },
+    {
+      "query_id": 715,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.149162
+    },
+    {
+      "query_id": 716,
+      "recall": 0.370000,
+      "hardness": 0.630000,
+      "predicted_hardness": 0.539924
+    },
+    {
+      "query_id": 717,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.196002
+    },
+    {
+      "query_id": 718,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.026765
+    },
+    {
+      "query_id": 719,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.041817
+    },
+    {
+      "query_id": 720,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.107447
+    },
+    {
+      "query_id": 721,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.307361
+    },
+    {
+      "query_id": 722,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.263766
+    },
+    {
+      "query_id": 723,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.034505
+    },
+    {
+      "query_id": 724,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.254091
+    },
+    {
+      "query_id": 725,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.217901
+    },
+    {
+      "query_id": 726,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.112840
+    },
+    {
+      "query_id": 727,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.772809
+    },
+    {
+      "query_id": 728,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.056120
+    },
+    {
+      "query_id": 729,
+      "recall": 0.540000,
+      "hardness": 0.460000,
+      "predicted_hardness": 0.653557
+    },
+    {
+      "query_id": 730,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.297341
+    },
+    {
+      "query_id": 731,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.188009
+    },
+    {
+      "query_id": 732,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.316774
+    },
+    {
+      "query_id": 733,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.202954
+    },
+    {
+      "query_id": 734,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.125048
+    },
+    {
+      "query_id": 735,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.117207
+    },
+    {
+      "query_id": 736,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.277469
+    },
+    {
+      "query_id": 737,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.457995
+    },
+    {
+      "query_id": 738,
+      "recall": 0.530000,
+      "hardness": 0.470000,
+      "predicted_hardness": 0.604378
+    },
+    {
+      "query_id": 739,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.189909
+    },
+    {
+      "query_id": 740,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.135150
+    },
+    {
+      "query_id": 741,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.347054
+    },
+    {
+      "query_id": 742,
+      "recall": 0.630000,
+      "hardness": 0.370000,
+      "predicted_hardness": 0.326850
+    },
+    {
+      "query_id": 743,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.270308
+    },
+    {
+      "query_id": 744,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.999349
+    },
+    {
+      "query_id": 745,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.414286
+    },
+    {
+      "query_id": 746,
+      "recall": 0.460000,
+      "hardness": 0.540000,
+      "predicted_hardness": 0.295588
+    },
+    {
+      "query_id": 747,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.286116
+    },
+    {
+      "query_id": 748,
+      "recall": 0.400000,
+      "hardness": 0.600000,
+      "predicted_hardness": 0.364843
+    },
+    {
+      "query_id": 749,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.225721
+    },
+    {
+      "query_id": 750,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.133386
+    },
+    {
+      "query_id": 751,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.029904
+    },
+    {
+      "query_id": 752,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.150957
+    },
+    {
+      "query_id": 753,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.307132
+    },
+    {
+      "query_id": 754,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.394126
+    },
+    {
+      "query_id": 755,
+      "recall": 0.320000,
+      "hardness": 0.680000,
+      "predicted_hardness": 0.641744
+    },
+    {
+      "query_id": 756,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.146314
+    },
+    {
+      "query_id": 757,
+      "recall": 0.510000,
+      "hardness": 0.490000,
+      "predicted_hardness": 0.633406
+    },
+    {
+      "query_id": 758,
+      "recall": 0.380000,
+      "hardness": 0.620000,
+      "predicted_hardness": 0.501342
+    },
+    {
+      "query_id": 759,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.218258
+    },
+    {
+      "query_id": 760,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.283585
+    },
+    {
+      "query_id": 761,
+      "recall": 0.650000,
+      "hardness": 0.350000,
+      "predicted_hardness": 0.333266
+    },
+    {
+      "query_id": 762,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.093714
+    },
+    {
+      "query_id": 763,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.277769
+    },
+    {
+      "query_id": 764,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.107713
+    },
+    {
+      "query_id": 765,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.117136
+    },
+    {
+      "query_id": 766,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.084079
+    },
+    {
+      "query_id": 767,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.075433
+    },
+    {
+      "query_id": 768,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.105562
+    },
+    {
+      "query_id": 769,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.386108
+    },
+    {
+      "query_id": 770,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.153892
+    },
+    {
+      "query_id": 771,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.119768
+    },
+    {
+      "query_id": 772,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.339151
+    },
+    {
+      "query_id": 773,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.172709
+    },
+    {
+      "query_id": 774,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.111427
+    },
+    {
+      "query_id": 775,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.106601
+    },
+    {
+      "query_id": 776,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.108720
+    },
+    {
+      "query_id": 777,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.138717
+    },
+    {
+      "query_id": 778,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.229306
+    },
+    {
+      "query_id": 779,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.040324
+    },
+    {
+      "query_id": 780,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.044564
+    },
+    {
+      "query_id": 781,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.193313
+    },
+    {
+      "query_id": 782,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.435080
+    },
+    {
+      "query_id": 783,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.077806
+    },
+    {
+      "query_id": 784,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.188611
+    },
+    {
+      "query_id": 785,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.174855
+    },
+    {
+      "query_id": 786,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.122668
+    },
+    {
+      "query_id": 787,
+      "recall": 0.440000,
+      "hardness": 0.560000,
+      "predicted_hardness": 0.602210
+    },
+    {
+      "query_id": 788,
+      "recall": 0.120000,
+      "hardness": 0.880000,
+      "predicted_hardness": 0.653158
+    },
+    {
+      "query_id": 789,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.164837
+    },
+    {
+      "query_id": 790,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.417876
+    },
+    {
+      "query_id": 791,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.442386
+    },
+    {
+      "query_id": 792,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.334061
+    },
+    {
+      "query_id": 793,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.529294
+    },
+    {
+      "query_id": 794,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.250569
+    },
+    {
+      "query_id": 795,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.245295
+    },
+    {
+      "query_id": 796,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.417375
+    },
+    {
+      "query_id": 797,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.318990
+    },
+    {
+      "query_id": 798,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.057691
+    },
+    {
+      "query_id": 799,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.266353
+    },
+    {
+      "query_id": 800,
+      "recall": 0.740000,
+      "hardness": 0.260000,
+      "predicted_hardness": 0.644875
+    },
+    {
+      "query_id": 801,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.273753
+    },
+    {
+      "query_id": 802,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.083164
+    },
+    {
+      "query_id": 803,
+      "recall": 0.260000,
+      "hardness": 0.740000,
+      "predicted_hardness": 0.542708
+    },
+    {
+      "query_id": 804,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.107581
+    },
+    {
+      "query_id": 805,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.527057
+    },
+    {
+      "query_id": 806,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.170024
+    },
+    {
+      "query_id": 807,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.049772
+    },
+    {
+      "query_id": 808,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.548295
+    },
+    {
+      "query_id": 809,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.259788
+    },
+    {
+      "query_id": 810,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.133263
+    },
+    {
+      "query_id": 811,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.235347
+    },
+    {
+      "query_id": 812,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.231930
+    },
+    {
+      "query_id": 813,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.264430
+    },
+    {
+      "query_id": 814,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.498607
+    },
+    {
+      "query_id": 815,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.538225
+    },
+    {
+      "query_id": 816,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.149889
+    },
+    {
+      "query_id": 817,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.263719
+    },
+    {
+      "query_id": 818,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.460009
+    },
+    {
+      "query_id": 819,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.327596
+    },
+    {
+      "query_id": 820,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.170642
+    },
+    {
+      "query_id": 821,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.042242
+    },
+    {
+      "query_id": 822,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.363329
+    },
+    {
+      "query_id": 823,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.274496
+    },
+    {
+      "query_id": 824,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.885473
+    },
+    {
+      "query_id": 825,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.309938
+    },
+    {
+      "query_id": 826,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.194390
+    },
+    {
+      "query_id": 827,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.298473
+    },
+    {
+      "query_id": 828,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.390620
+    },
+    {
+      "query_id": 829,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.239582
+    },
+    {
+      "query_id": 830,
+      "recall": 0.400000,
+      "hardness": 0.600000,
+      "predicted_hardness": 0.513456
+    },
+    {
+      "query_id": 831,
+      "recall": 0.490000,
+      "hardness": 0.510000,
+      "predicted_hardness": 0.475172
+    },
+    {
+      "query_id": 832,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.055964
+    },
+    {
+      "query_id": 833,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.385517
+    },
+    {
+      "query_id": 834,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.181754
+    },
+    {
+      "query_id": 835,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.195794
+    },
+    {
+      "query_id": 836,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.255979
+    },
+    {
+      "query_id": 837,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.246284
+    },
+    {
+      "query_id": 838,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.300977
+    },
+    {
+      "query_id": 839,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.950968
+    },
+    {
+      "query_id": 840,
+      "recall": 0.950000,
+      "hardness": 0.050000,
+      "predicted_hardness": 0.132442
+    },
+    {
+      "query_id": 841,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.999833
+    },
+    {
+      "query_id": 842,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.123726
+    },
+    {
+      "query_id": 843,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.573564
+    },
+    {
+      "query_id": 844,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.216391
+    },
+    {
+      "query_id": 845,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.042261
+    },
+    {
+      "query_id": 846,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.207227
+    },
+    {
+      "query_id": 847,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.641045
+    },
+    {
+      "query_id": 848,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.285205
+    },
+    {
+      "query_id": 849,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.327556
+    },
+    {
+      "query_id": 850,
+      "recall": 0.530000,
+      "hardness": 0.470000,
+      "predicted_hardness": 0.207746
+    },
+    {
+      "query_id": 851,
+      "recall": 0.860000,
+      "hardness": 0.140000,
+      "predicted_hardness": 0.422097
+    },
+    {
+      "query_id": 852,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.215611
+    },
+    {
+      "query_id": 853,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.045612
+    },
+    {
+      "query_id": 854,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.241197
+    },
+    {
+      "query_id": 855,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.250362
+    },
+    {
+      "query_id": 856,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.174427
+    },
+    {
+      "query_id": 857,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.142189
+    },
+    {
+      "query_id": 858,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.438306
+    },
+    {
+      "query_id": 859,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.439903
+    },
+    {
+      "query_id": 860,
+      "recall": 0.130000,
+      "hardness": 0.870000,
+      "predicted_hardness": 0.785477
+    },
+    {
+      "query_id": 861,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.999347
+    },
+    {
+      "query_id": 862,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.064695
+    },
+    {
+      "query_id": 863,
+      "recall": 0.480000,
+      "hardness": 0.520000,
+      "predicted_hardness": 0.319099
+    },
+    {
+      "query_id": 864,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.165622
+    },
+    {
+      "query_id": 865,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.182380
+    },
+    {
+      "query_id": 866,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.199341
+    },
+    {
+      "query_id": 867,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.226834
+    },
+    {
+      "query_id": 868,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.231312
+    },
+    {
+      "query_id": 869,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.093845
+    },
+    {
+      "query_id": 870,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.275465
+    },
+    {
+      "query_id": 871,
+      "recall": 0.670000,
+      "hardness": 0.330000,
+      "predicted_hardness": 0.325475
+    },
+    {
+      "query_id": 872,
+      "recall": 0.290000,
+      "hardness": 0.710000,
+      "predicted_hardness": 0.569502
+    },
+    {
+      "query_id": 873,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.328754
+    },
+    {
+      "query_id": 874,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.093861
+    },
+    {
+      "query_id": 875,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.151335
+    },
+    {
+      "query_id": 876,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.053904
+    },
+    {
+      "query_id": 877,
+      "recall": 0.480000,
+      "hardness": 0.520000,
+      "predicted_hardness": 0.431078
+    },
+    {
+      "query_id": 878,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.154611
+    },
+    {
+      "query_id": 879,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.243890
+    },
+    {
+      "query_id": 880,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.652302
+    },
+    {
+      "query_id": 881,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.111347
+    },
+    {
+      "query_id": 882,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.192198
+    },
+    {
+      "query_id": 883,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.230295
+    },
+    {
+      "query_id": 884,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.278454
+    },
+    {
+      "query_id": 885,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.157488
+    },
+    {
+      "query_id": 886,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.311213
+    },
+    {
+      "query_id": 887,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.114757
+    },
+    {
+      "query_id": 888,
+      "recall": 0.670000,
+      "hardness": 0.330000,
+      "predicted_hardness": 0.283032
+    },
+    {
+      "query_id": 889,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.300974
+    },
+    {
+      "query_id": 890,
+      "recall": 0.470000,
+      "hardness": 0.530000,
+      "predicted_hardness": 0.529011
+    },
+    {
+      "query_id": 891,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.195332
+    },
+    {
+      "query_id": 892,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.077608
+    },
+    {
+      "query_id": 893,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.212558
+    },
+    {
+      "query_id": 894,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.358330
+    },
+    {
+      "query_id": 895,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.415625
+    },
+    {
+      "query_id": 896,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.154627
+    },
+    {
+      "query_id": 897,
+      "recall": 0.750000,
+      "hardness": 0.250000,
+      "predicted_hardness": 0.308381
+    },
+    {
+      "query_id": 898,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.409954
+    },
+    {
+      "query_id": 899,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.330802
+    },
+    {
+      "query_id": 900,
+      "recall": 0.680000,
+      "hardness": 0.320000,
+      "predicted_hardness": 0.174935
+    },
+    {
+      "query_id": 901,
+      "recall": 0.520000,
+      "hardness": 0.480000,
+      "predicted_hardness": 0.401406
+    },
+    {
+      "query_id": 902,
+      "recall": 0.040000,
+      "hardness": 0.960000,
+      "predicted_hardness": 0.665242
+    },
+    {
+      "query_id": 903,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.412237
+    },
+    {
+      "query_id": 904,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.094552
+    },
+    {
+      "query_id": 905,
+      "recall": 0.420000,
+      "hardness": 0.580000,
+      "predicted_hardness": 0.373981
+    },
+    {
+      "query_id": 906,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.241283
+    },
+    {
+      "query_id": 907,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.354658
+    },
+    {
+      "query_id": 908,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.060530
+    },
+    {
+      "query_id": 909,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.453555
+    },
+    {
+      "query_id": 910,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.437479
+    },
+    {
+      "query_id": 911,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.434446
+    },
+    {
+      "query_id": 912,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.374985
+    },
+    {
+      "query_id": 913,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.370778
+    },
+    {
+      "query_id": 914,
+      "recall": 0.820000,
+      "hardness": 0.180000,
+      "predicted_hardness": 0.612947
+    },
+    {
+      "query_id": 915,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.249754
+    },
+    {
+      "query_id": 916,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.159771
+    },
+    {
+      "query_id": 917,
+      "recall": 0.670000,
+      "hardness": 0.330000,
+      "predicted_hardness": 0.372416
+    },
+    {
+      "query_id": 918,
+      "recall": 0.550000,
+      "hardness": 0.450000,
+      "predicted_hardness": 0.503545
+    },
+    {
+      "query_id": 919,
+      "recall": 0.690000,
+      "hardness": 0.310000,
+      "predicted_hardness": 0.244279
+    },
+    {
+      "query_id": 920,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.231952
+    },
+    {
+      "query_id": 921,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.085868
+    },
+    {
+      "query_id": 922,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.064483
+    },
+    {
+      "query_id": 923,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.413730
+    },
+    {
+      "query_id": 924,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.208491
+    },
+    {
+      "query_id": 925,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.153890
+    },
+    {
+      "query_id": 926,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.490667
+    },
+    {
+      "query_id": 927,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.244807
+    },
+    {
+      "query_id": 928,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.347934
+    },
+    {
+      "query_id": 929,
+      "recall": 0.470000,
+      "hardness": 0.530000,
+      "predicted_hardness": 0.177210
+    },
+    {
+      "query_id": 930,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.215334
+    },
+    {
+      "query_id": 931,
+      "recall": 0.790000,
+      "hardness": 0.210000,
+      "predicted_hardness": 0.242687
+    },
+    {
+      "query_id": 932,
+      "recall": 0.900000,
+      "hardness": 0.100000,
+      "predicted_hardness": 0.110782
+    },
+    {
+      "query_id": 933,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.103202
+    },
+    {
+      "query_id": 934,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.298417
+    },
+    {
+      "query_id": 935,
+      "recall": 0.540000,
+      "hardness": 0.460000,
+      "predicted_hardness": 0.522195
+    },
+    {
+      "query_id": 936,
+      "recall": 0.710000,
+      "hardness": 0.290000,
+      "predicted_hardness": 0.247990
+    },
+    {
+      "query_id": 937,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.073399
+    },
+    {
+      "query_id": 938,
+      "recall": 0.380000,
+      "hardness": 0.620000,
+      "predicted_hardness": 0.453744
+    },
+    {
+      "query_id": 939,
+      "recall": 0.920000,
+      "hardness": 0.080000,
+      "predicted_hardness": 0.403245
+    },
+    {
+      "query_id": 940,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.123426
+    },
+    {
+      "query_id": 941,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.216706
+    },
+    {
+      "query_id": 942,
+      "recall": 0.630000,
+      "hardness": 0.370000,
+      "predicted_hardness": 0.133853
+    },
+    {
+      "query_id": 943,
+      "recall": 0.800000,
+      "hardness": 0.200000,
+      "predicted_hardness": 0.237020
+    },
+    {
+      "query_id": 944,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.326299
+    },
+    {
+      "query_id": 945,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.025118
+    },
+    {
+      "query_id": 946,
+      "recall": 0.590000,
+      "hardness": 0.410000,
+      "predicted_hardness": 0.248118
+    },
+    {
+      "query_id": 947,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.119408
+    },
+    {
+      "query_id": 948,
+      "recall": 0.600000,
+      "hardness": 0.400000,
+      "predicted_hardness": 0.378666
+    },
+    {
+      "query_id": 949,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.158644
+    },
+    {
+      "query_id": 950,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.445043
+    },
+    {
+      "query_id": 951,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.099607
+    },
+    {
+      "query_id": 952,
+      "recall": 0.940000,
+      "hardness": 0.060000,
+      "predicted_hardness": 0.087816
+    },
+    {
+      "query_id": 953,
+      "recall": 0.360000,
+      "hardness": 0.640000,
+      "predicted_hardness": 0.411612
+    },
+    {
+      "query_id": 954,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.198789
+    },
+    {
+      "query_id": 955,
+      "recall": 0.980000,
+      "hardness": 0.020000,
+      "predicted_hardness": 0.104571
+    },
+    {
+      "query_id": 956,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.501470
+    },
+    {
+      "query_id": 957,
+      "recall": 1.000000,
+      "hardness": 0.000000,
+      "predicted_hardness": 0.120850
+    },
+    {
+      "query_id": 958,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.353570
+    },
+    {
+      "query_id": 959,
+      "recall": 0.380000,
+      "hardness": 0.620000,
+      "predicted_hardness": 0.642673
+    },
+    {
+      "query_id": 960,
+      "recall": 0.730000,
+      "hardness": 0.270000,
+      "predicted_hardness": 0.306735
+    },
+    {
+      "query_id": 961,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.367380
+    },
+    {
+      "query_id": 962,
+      "recall": 0.910000,
+      "hardness": 0.090000,
+      "predicted_hardness": 0.147210
+    },
+    {
+      "query_id": 963,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.214969
+    },
+    {
+      "query_id": 964,
+      "recall": 0.890000,
+      "hardness": 0.110000,
+      "predicted_hardness": 0.272946
+    },
+    {
+      "query_id": 965,
+      "recall": 0.590000,
+      "hardness": 0.410000,
+      "predicted_hardness": 0.987603
+    },
+    {
+      "query_id": 966,
+      "recall": 0.610000,
+      "hardness": 0.390000,
+      "predicted_hardness": 0.360309
+    },
+    {
+      "query_id": 967,
+      "recall": 0.870000,
+      "hardness": 0.130000,
+      "predicted_hardness": 0.308989
+    },
+    {
+      "query_id": 968,
+      "recall": 0.650000,
+      "hardness": 0.350000,
+      "predicted_hardness": 0.292524
+    },
+    {
+      "query_id": 969,
+      "recall": 0.830000,
+      "hardness": 0.170000,
+      "predicted_hardness": 0.363134
+    },
+    {
+      "query_id": 970,
+      "recall": 0.540000,
+      "hardness": 0.460000,
+      "predicted_hardness": 0.309425
+    },
+    {
+      "query_id": 971,
+      "recall": 0.880000,
+      "hardness": 0.120000,
+      "predicted_hardness": 0.332323
+    },
+    {
+      "query_id": 972,
+      "recall": 0.380000,
+      "hardness": 0.620000,
+      "predicted_hardness": 0.556285
+    },
+    {
+      "query_id": 973,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.110595
+    },
+    {
+      "query_id": 974,
+      "recall": 0.000000,
+      "hardness": 1.000000,
+      "predicted_hardness": 0.883767
+    },
+    {
+      "query_id": 975,
+      "recall": 0.630000,
+      "hardness": 0.370000,
+      "predicted_hardness": 0.366452
+    },
+    {
+      "query_id": 976,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.282372
+    },
+    {
+      "query_id": 977,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.233150
+    },
+    {
+      "query_id": 978,
+      "recall": 0.810000,
+      "hardness": 0.190000,
+      "predicted_hardness": 0.743837
+    },
+    {
+      "query_id": 979,
+      "recall": 0.660000,
+      "hardness": 0.340000,
+      "predicted_hardness": 0.335333
+    },
+    {
+      "query_id": 980,
+      "recall": 0.930000,
+      "hardness": 0.070000,
+      "predicted_hardness": 0.122233
+    },
+    {
+      "query_id": 981,
+      "recall": 0.960000,
+      "hardness": 0.040000,
+      "predicted_hardness": 0.080688
+    },
+    {
+      "query_id": 982,
+      "recall": 0.160000,
+      "hardness": 0.840000,
+      "predicted_hardness": 0.339590
+    },
+    {
+      "query_id": 983,
+      "recall": 0.840000,
+      "hardness": 0.160000,
+      "predicted_hardness": 0.310965
+    },
+    {
+      "query_id": 984,
+      "recall": 0.010000,
+      "hardness": 0.990000,
+      "predicted_hardness": 0.893916
+    },
+    {
+      "query_id": 985,
+      "recall": 0.640000,
+      "hardness": 0.360000,
+      "predicted_hardness": 0.168563
+    },
+    {
+      "query_id": 986,
+      "recall": 0.780000,
+      "hardness": 0.220000,
+      "predicted_hardness": 0.332464
+    },
+    {
+      "query_id": 987,
+      "recall": 0.570000,
+      "hardness": 0.430000,
+      "predicted_hardness": 0.307609
+    },
+    {
+      "query_id": 988,
+      "recall": 0.970000,
+      "hardness": 0.030000,
+      "predicted_hardness": 0.067524
+    },
+    {
+      "query_id": 989,
+      "recall": 0.400000,
+      "hardness": 0.600000,
+      "predicted_hardness": 0.563519
+    },
+    {
+      "query_id": 990,
+      "recall": 0.580000,
+      "hardness": 0.420000,
+      "predicted_hardness": 0.482841
+    },
+    {
+      "query_id": 991,
+      "recall": 0.440000,
+      "hardness": 0.560000,
+      "predicted_hardness": 0.611392
+    },
+    {
+      "query_id": 992,
+      "recall": 0.850000,
+      "hardness": 0.150000,
+      "predicted_hardness": 0.138157
+    },
+    {
+      "query_id": 993,
+      "recall": 0.760000,
+      "hardness": 0.240000,
+      "predicted_hardness": 0.169799
+    },
+    {
+      "query_id": 994,
+      "recall": 0.620000,
+      "hardness": 0.380000,
+      "predicted_hardness": 0.464746
+    },
+    {
+      "query_id": 995,
+      "recall": 0.770000,
+      "hardness": 0.230000,
+      "predicted_hardness": 0.271778
+    },
+    {
+      "query_id": 996,
+      "recall": 0.720000,
+      "hardness": 0.280000,
+      "predicted_hardness": 0.273453
+    },
+    {
+      "query_id": 997,
+      "recall": 0.990000,
+      "hardness": 0.010000,
+      "predicted_hardness": 0.084657
+    },
+    {
+      "query_id": 998,
+      "recall": 0.320000,
+      "hardness": 0.680000,
+      "predicted_hardness": 0.528183
+    },
+    {
+      "query_id": 999,
+      "recall": 0.700000,
+      "hardness": 0.300000,
+      "predicted_hardness": 0.315317
+    }
+  ]
+}

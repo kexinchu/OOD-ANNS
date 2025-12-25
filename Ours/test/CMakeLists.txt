@@ -1,3 +1,13 @@
 add_executable(test_ours   test_ours.cc)
 add_executable(test_performance_analysis   test_performance_analysis.cc)
+add_executable(test_runtime_insert   test_runtime_insert.cc)
+add_executable(test_lhp_comparison   test_lhp_comparison.cc)
+add_executable(test_lhp_detailed_comparison   test_lhp_detailed_comparison.cc)
+add_executable(test_fix_node_cost   test_fix_node_cost.cc)
+add_executable(test_lazy_delete   test_lazy_delete.cc ../ourslib/utils/ssd_storage.cc)
+add_executable(test_hardness_predictor_tree   test_hardness_predictor_tree.cc ../ourslib/utils/ssd_storage.cc)
+add_executable(test_filter_performance   test_filter_performance.cc)
+add_executable(test_runtime_update_end2end   test_runtime_update_end2end.cc ../ourslib/utils/ssd_storage.cc)
+add_executable(test_runtime_update_end2end_ngfix   test_runtime_update_end2end_ngfix.cc)
+add_executable(test_index_baseline_performance   test_index_baseline_performance.cc)
 

@@ -24,6 +24,8 @@ public:
     virtual std::vector<id_t> get_frontier_snapshot() { return std::vector<id_t>(); }
     virtual float get_best_candidate_dist() { return std::numeric_limits<float>::max(); }
     virtual float get_worst_topk_dist(size_t k) { return std::numeric_limits<float>::max(); }
+    virtual size_t get_max_candidate_set_size() { return 0; }
+    virtual void reset_max_candidate_set_size() {}
 };
 
 class Search_PriorityQueue : public SearchList
@@ -410,6 +412,7 @@ public:
     VisitedList *vl;
     vl_type *visited_array;
     vl_type visited_array_tag;
+    size_t max_candidate_set_size;  // Track maximum size of candidate_set
 
     Search_QuadHeap(uint32_t L, std::shared_ptr<VisitedListPool> visited_list_pool_)
     : top_candidates(L), candidate_set(L) {
@@ -418,6 +421,7 @@ public:
         vl = visited_list_pool_->getFreeVisitedList();
         visited_array = vl->mass;
         visited_array_tag = vl->curV;
+        max_candidate_set_size = 0;
     }
 
     virtual float get_dist_bound() {
@@ -430,6 +434,10 @@ public:
 
         if (flag_consider_candidate) {
             candidate_set.push({-dist, candidate_id});
+            // Track maximum candidate_set size
+            if(candidate_set.size() > max_candidate_set_size) {
+                max_candidate_set_size = candidate_set.size();
+            }
             if(!is_delete) {
                 top_candidates.push({dist, candidate_id});
             }
@@ -522,5 +530,13 @@ public:
     virtual void releaseVisitedList() {
         visited_list_pool->releaseVisitedList(vl);
     };
+    
+    virtual size_t get_max_candidate_set_size() {
+        return max_candidate_set_size;
+    }
+    
+    virtual void reset_max_candidate_set_size() {
+        max_candidate_set_size = 0;
+    }
 };
 }
